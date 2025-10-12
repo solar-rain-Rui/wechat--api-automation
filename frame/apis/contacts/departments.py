@@ -29,7 +29,7 @@ class Departments(WeWork):
         删除部门接口
         :return:
         """
-        delete_url=f"https://qyapi.weixin.qq.com/cgi-bin/department/delete?access_token={self.token}&id=depart_id"
+        delete_url=f"https://qyapi.weixin.qq.com/cgi-bin/department/delete?access_token={self.token}&id={depart_id}"
         r=requests.request("DELETE", delete_url)
         return r
     def get(self):

@@ -1,3 +1,13 @@
+
+"""
+接口自动化测试框架第一版
+1.通过ApiObject模式，把框架分为了3层
+2.通过wework获取access_token
+3.在departments中完成了部门管理业务接口的描述，继承了wework,完成了access_token的传递
+4.在测试用例中通过setup完成了业务接口的实例化和测试数据的准备
+5.在具体的测试用例中传入测试数据，拼接业务逻辑，完成断言
+"""
+
 from frame.apis.contacts.departments import Departments
 
 class TestDepartment:
@@ -39,12 +49,14 @@ class TestDepartment:
         assert r.json().get("errcode") == 0
         #查询是否更新成功
             #后面用数据库断言来实现
+        print(f"depart_id: {self.depart_id}, type: {type(self.depart_id)}")
 
         #删除部门
         r=self.department.delete(self.depart_id)
         assert r.status_code == 200
         assert r.json().get("errcode") == 0
         #查询是否删除成功
+        r=self.department.get()
         # 获取所有部门id放到列表中
         depart_ids = [d.get("id") for d in r.json().get("department_id")]
         assert self.depart_id not in depart_ids
