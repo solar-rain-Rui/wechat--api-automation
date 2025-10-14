@@ -11,8 +11,16 @@ class Departments(WeWork):
         创建部门接口
         :return:
         """
-        create_url = f"https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token={self.token}"#token?
-        r=requests.request("POST", create_url, json=data)
+        #create_url = f"https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token={self.token}"#token?
+        create_url = f"{self.base_url}/department/create?access_token={self.token}"#token?
+
+        #r=requests.request("POST", create_url, json=data)
+        req={
+            "method": "POST",
+            "url": create_url,
+            "json": data
+        }
+        r=self.send_api(req)
         return r
 
     def update(self,data):
@@ -20,8 +28,16 @@ class Departments(WeWork):
         更新部门接口
         :return:
         """
-        update_url=f"https://qyapi.weixin.qq.com/cgi-bin/department/update?access_token={self.token}"
-        r=requests.request("POST", update_url, json=data)
+        #update_url=f"https://qyapi.weixin.qq.com/cgi-bin/department/update?access_token={self.token}"
+
+        update_url=f"{self.base_url}/department/update?access_token={self.token}"
+        #r=requests.request("POST", update_url, json=data)
+        req={
+            "method": "POST",
+            "url": update_url,
+            "json": data
+        }
+        r=self.send_api(req)
         return r
 
     def delete(self,depart_id):
@@ -29,14 +45,28 @@ class Departments(WeWork):
         删除部门接口
         :return:
         """
-        delete_url=f"https://qyapi.weixin.qq.com/cgi-bin/department/delete?access_token={self.token}&id={depart_id}"
-        r=requests.request("DELETE", delete_url)
+        #delete_url=f"https://qyapi.weixin.qq.com/cgi-bin/department/delete?access_token={self.token}&id={depart_id}"
+        delete_url=f"{self.base_url}/department/delete?access_token={self.token}&id={depart_id}"
+
+        #r=requests.request("GET", delete_url)
+        req={
+            "method": "GET",
+            "url": delete_url
+        }
+        r=self.send_api(req)
         return r
     def get(self):
         """
         查询部门id
         :return:
         """
-        get_url = f"https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token={self.token}"
-        r=requests.request("GET", get_url)
+        #get_url = f"https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token={self.token}"
+        get_url = f"{self.base_url}/department/simplelist?access_token={self.token}"
+
+        #r=requests.request("GET", get_url)
+        req={
+            "method": "GET",
+            "url": get_url
+        }
+        r=self.send_api(req)
         return r

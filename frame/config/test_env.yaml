@@ -1,0 +1,7 @@
+#把接口测试相关的配置数据提取出来，在yaml文件中进行保存
+base_url: https://qyapi.weixin.qq.com/cgi-bin
+#提取相关账户信息
+corpid:
+  接口自动化测试: ww779187ee7c9f7085
+corpsecret:
+  contacts: AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE

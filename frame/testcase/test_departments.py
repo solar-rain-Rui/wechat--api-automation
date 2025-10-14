@@ -8,6 +8,13 @@
 5.在具体的测试用例中传入测试数据，拼接业务逻辑，完成断言
 """
 
+"""
+接口自动化测试框架优化
+1.完成了base_api的封装，封装了requests发送请求的方法
+2.把配置数据拆分到yaml文件中进行管理，完成了数据和用例的抽离
+"""
+
+
 from frame.apis.contacts.departments import Departments
 
 class TestDepartment:
