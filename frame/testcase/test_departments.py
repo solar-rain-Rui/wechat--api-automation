@@ -15,6 +15,7 @@
 """
 
 
+
 from frame.apis.contacts.departments import Departments
 
 class TestDepartment:

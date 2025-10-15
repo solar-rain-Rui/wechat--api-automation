@@ -1,0 +1,14 @@
+- data:
+    name: 技术部
+    name_en: JISHU1
+    parentid: 1
+    order: 1
+    id: 2
+  expect: 0
+- data:
+    name: " "
+    name_en: JISHU2
+    parentid: 1
+    order: 2
+    id: 3
+  expect: 60001
