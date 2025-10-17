@@ -7,12 +7,17 @@
 4.在测试用例中通过setup完成了业务接口的实例化和测试数据的准备
 5.在具体的测试用例中传入测试数据，拼接业务逻辑，完成断言
 """
+import json
+
+from frame.utils.utils import Utils
 
 """
 接口自动化测试框架优化
 1.完成了base_api的封装，封装了requests发送请求的方法
 2.把配置数据拆分到yaml文件中进行管理，完成了数据和用例的抽离
 """
+
+
 
 
 
@@ -74,5 +79,37 @@ class TestDepartment:
         depart_ids = jsonpath(r.json(), "$..id")
         print(f"获取到的部门Id列表为{depart_ids}")
         assert self.depart_id not in depart_ids
+
+    def test_get_departments_schema(self):
+        """
+        测试获取所有部门id接口响应符合预期结构
+        :param self:
+        :return:
+        """
+        expect={
+                "errcode": 0,
+                "errmsg": "ok",
+                "department_id": [
+                    {
+                        "id": 2,
+                        "parentid": 1,
+                        "order": 10
+                    },
+                    {
+                        "id": 3,
+                        "parentid": 2,
+                        "order": 40
+                    }
+                ]
+        }
+        #生成json schema文件
+        schema_path="frame/config/get_departments_schema.json"
+        Utils.generate_schema(expect,schema_path)
+        #发出查询请求
+        r=self.department.get()
+        #断言响应体符合预期结构
+        schema=json.load(open(schema_path,encoding="utf-8"))
+        print(f"获取到的schema内容为:{schema}")
+        assert Utils.schema_validate(r.json(),schema)
 
 
