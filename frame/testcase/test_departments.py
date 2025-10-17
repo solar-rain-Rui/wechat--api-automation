@@ -17,6 +17,7 @@
 
 
 from frame.apis.contacts.departments import Departments
+from jsonpath import jsonpath
 
 class TestDepartment:
 
@@ -49,7 +50,10 @@ class TestDepartment:
         #查询是否创建成功
         r=self.department.get()
             #获取所有部门id放到列表中
-        depart_ids = [d.get("id") for d in r.json().get("department_id")]
+        #depart_ids = [d.get("id") for d in r.json().get("department_id")]
+        #通过jsonpath获取所有部门id，放到列表中
+        depart_ids=jsonpath(r.json(),"$..id")
+        print(f"获取到的部门Id列表为{depart_ids}")
         assert self.depart_id in depart_ids
         #更新部门
         r=self.department.update(self.update_data)
@@ -66,7 +70,9 @@ class TestDepartment:
         #查询是否删除成功
         r=self.department.get()
         # 获取所有部门id放到列表中
-        depart_ids = [d.get("id") for d in r.json().get("department_id")]
+        #depart_ids = [d.get("id") for d in r.json().get("department_id")]
+        depart_ids = jsonpath(r.json(), "$..id")
+        print(f"获取到的部门Id列表为{depart_ids}")
         assert self.depart_id not in depart_ids
 
 
