@@ -3,7 +3,7 @@ import yaml
 from genson import SchemaBuilder
 import json
 
-
+import pymysql
 
 from jsonschema.validators import validate
 
@@ -52,3 +52,27 @@ class Utils:
         except Exception as e:
             print(f"schema 结构校验异常{e}")
             return False
+    @classmethod
+    def query_db(cls,sql,database_info):
+        """
+        连接数据库，执行对应的sql语句，获得执行结果
+        :param sql:要执行的sql语句
+        :param database_info:数据库配置信息
+        :return:sql执行结果
+        """
+        #连接数据库
+        #connect=pymysql.Connect(host="",port="",database"",user="",password="",charset="")
+        conn=pymysql.Connect(**database_info)
+        #创建游标
+        cursor=conn.cursor()
+        print(f"创建的游标为{cursor}")
+        print(f"要执行的sql语句为{sql}")
+        #执行sql语句
+        cursor.execute(sql)
+        #获取查询结果
+        datas=cursor.fetchall()
+        print(f"执行结果数据为{datas}")
+        #关闭连接
+        cursor.close()
+        conn.close()
+        return datas

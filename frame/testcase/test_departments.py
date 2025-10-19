@@ -66,8 +66,16 @@ class TestDepartment:
         assert r.json().get("errcode") == 0
         #查询是否更新成功
             #后面用数据库断言来实现
-        print(f"depart_id: {self.depart_id}, type: {type(self.depart_id)}")
-
+        database_info={
+           "host":"127.0.0.1",
+           "port":3306,
+           "database":"contacts",
+           "user":"root",
+           "password":"root1997",
+           "charset":"utf8"
+       }
+        datas=Utils.query_db("select name from departments where id={self.depart_id}",database_info)
+        assert datas[0][0]==self.update_name
         #删除部门
         r=self.department.delete(self.depart_id)
         assert r.status_code == 200
