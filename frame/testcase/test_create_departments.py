@@ -8,7 +8,8 @@ class TestCreateDepartments:
     def setup_class(self):
         #实例化部门类
         self.department=Departments()
-
+        # 清理部门数据
+        self.department.clear()
     #参数完成创建部门单接口校验
     @pytest.mark.parametrize(
         "depart_data",

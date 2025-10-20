@@ -1,3 +1,4 @@
+import os.path
 
 import yaml
 from genson import SchemaBuilder
@@ -76,3 +77,11 @@ class Utils:
         cursor.close()
         conn.close()
         return datas
+
+    @classmethod
+    def get_frame_root_path(cls):
+        """
+        获取当前文件所在的绝对路径
+        :return:
+        """
+        return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

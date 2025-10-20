@@ -1,3 +1,5 @@
+from jsonpath import jsonpath
+
 from frame.apis.wework import WeWork
 import requests
 
@@ -71,4 +73,18 @@ class Departments(WeWork):
         r=self.send_api(req)
         return r
 
+    def clear(self):
+        """
+        清理已经存在的部门信息
+        :return: 
+        """
+        #查询目前存在的部门
+        r=self.get()
+        #提取所有部门id，返回列表
+        ids=jsonpath(r.json(),"$..id")
+        #id为1的是默认的基础父部门id，不可以删除
+        for id in ids:
+            if id !=1:
+                #调用删除部门接口
+                self.delete(id)
 

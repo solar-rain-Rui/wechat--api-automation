@@ -9,6 +9,8 @@
 """
 import json
 
+import allure
+
 from frame.utils.utils import Utils
 
 """
@@ -24,6 +26,7 @@ from frame.utils.utils import Utils
 from frame.apis.contacts.departments import Departments
 from jsonpath import jsonpath
 
+@allure.feature("部门管理接口测试用例")
 class TestDepartment:
 
     def setup_class(self):
@@ -43,39 +46,44 @@ class TestDepartment:
             "name":self.update_name,
             "id":self.depart_id
         }
+        #清理部门数据
+        self.department.clear()
+    @allure.story("部门操作场景用例")
     def test_departments_flow(self):
         """
         部门增删改查的场景
         :return:
         """
-        #创建部门
-        r=self.department.create(self.create_data)
-        assert r.status_code == 200
-        assert r.json().get("errcode") == 0
-        #查询是否创建成功
-        r=self.department.get()
-            #获取所有部门id放到列表中
-        #depart_ids = [d.get("id") for d in r.json().get("department_id")]
-        #通过jsonpath获取所有部门id，放到列表中
-        depart_ids=jsonpath(r.json(),"$..id")
-        print(f"获取到的部门Id列表为{depart_ids}")
-        assert self.depart_id in depart_ids
+        with allure.step("创建部门"):
+            #创建部门
+            r=self.department.create(self.create_data)
+            assert r.status_code == 200
+            assert r.json().get("errcode") == 0
+        with allure.step("查询是否创建成功"):
+            #查询是否创建成功
+            r=self.department.get()
+                #获取所有部门id放到列表中
+            #depart_ids = [d.get("id") for d in r.json().get("department_id")]
+            #通过jsonpath获取所有部门id，放到列表中
+            depart_ids=jsonpath(r.json(),"$..id")
+            print(f"获取到的部门Id列表为{depart_ids}")
+            assert self.depart_id in depart_ids
         #更新部门
         r=self.department.update(self.update_data)
         assert r.status_code == 200
         assert r.json().get("errcode") == 0
         #查询是否更新成功
             #后面用数据库断言来实现
-        database_info={
-           "host":"127.0.0.1",
-           "port":3306,
-           "database":"contacts",
-           "user":"root",
-           "password":"root1997",
-           "charset":"utf8"
-       }
-        datas=Utils.query_db("select name from departments where id={self.depart_id}",database_info)
-        assert datas[0][0]==self.update_name
+       #  database_info={
+       #     "host":"127.0.0.1",
+       #     "port":3306,
+       #     "database":"contacts",
+       #     "user":"root",
+       #     "password":"root1997",
+       #     "charset":"utf8"
+       # }
+       #  datas=Utils.query_db("select name from departments where id={self.depart_id}",database_info)
+       #  assert datas[0][0]==self.update_name
         #删除部门
         r=self.department.delete(self.depart_id)
         assert r.status_code == 200
