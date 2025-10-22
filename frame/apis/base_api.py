@@ -1,7 +1,9 @@
 
 import requests
 
-from frame.utils.log_utils import logger
+from frame.common.config import cf
+from frame.common.logger import log
+#from frame.utils.log_utils import logger
 
 
 class BaseApi:
@@ -11,8 +13,8 @@ class BaseApi:
         对于requests进行二次封装
         :return:接口响应
         """
-        logger.info(f"请求数据为{req}")
+        log.info(f"请求数据为{req}")
         r=requests.request(**req)
-        logger.info(f"接口响应为{r.text}")
+        log.info(f"接口响应为{r.text}")
         return r
 
