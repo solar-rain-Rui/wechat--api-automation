@@ -20,9 +20,6 @@ from frame.utils.utils import Utils
 """
 
 
-
-
-
 from frame.apis.contacts.departments import Departments
 from jsonpath import jsonpath
 

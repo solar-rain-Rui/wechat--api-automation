@@ -13,8 +13,8 @@ class BaseApi:
         对于requests进行二次封装
         :return:接口响应
         """
-        log.info(f"请求数据为{req}")
+        log.info(f"请求接口为：{req['url']}")
         r=requests.request(**req)
-        log.info(f"接口响应为{r.text}")
+        log.info(f"接口响应为：{r.text}")
         return r
 

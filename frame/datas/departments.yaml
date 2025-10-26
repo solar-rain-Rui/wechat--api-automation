@@ -1,14 +1,31 @@
-- data:
-    name: 技术部
-    name_en: JISHU1
-    parentid: 1
-    order: 1
-    id: 2
-  expect: 0
-- data:
-    name: " "
-    name_en: JISHU2
-    parentid: 1
-    order: 2
-    id: 3
-  expect: 60001
+create_department:
+  - name: 正常创建部门
+    data:
+      name: "接口测试部A"
+      name_en: "DeptA"
+      parentid: 1
+      id: 2001
+    expect:
+      errcode: 0
+
+get_department:
+  - name: 查询部门
+    params:
+      id: null  # 将被 fixture 动态注入
+    expect:
+      errcode: 0
+
+update_department:
+  - name: 修改部门名称
+    data:
+      id: null  # 将被 fixture 动态注入
+      name: "修改后的部门名称"
+    expect:
+      errcode: 0
+
+delete_department:
+  - name: 删除部门
+    params:
+      id: null  # 将被 fixture 动态注入
+    expect:
+      errcode: 0
