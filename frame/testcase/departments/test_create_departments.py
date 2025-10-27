@@ -1,8 +1,9 @@
 import pytest
 import allure
+import os
 from frame.common.tools import load_yaml
 from frame.common.assertions import AssertUtil
-
+from frame.common.schema import SchemaValidator
 
 @allure.feature("部门管理")
 class TestDepartments:
@@ -14,6 +15,9 @@ class TestDepartments:
         res = department_api.create(case["data"])
         assert res.status_code == 200
         AssertUtil.assert_json_value(res.json(), "$.errcode", case["expect"]["errcode"])
+        #jsonschema结构断言
+        schema_path = os.path.join(os.path.dirname(__file__), "../../schema/department_schema.json")
+        SchemaValidator.validate_json(res.json(), schema_path)
 
     @allure.story("查询部门")
     @pytest.mark.parametrize("case", load_yaml("datas/departments.yaml")["get_department"])
@@ -24,6 +28,9 @@ class TestDepartments:
         res = department_api.get(case["params"])
         assert res.status_code == 200
         AssertUtil.assert_json_value(res.json(), "$.errcode", case["expect"]["errcode"])
+        # jsonschema结构断言
+        schema_path = os.path.join(os.path.dirname(__file__), "../../schema/department_schema.json")
+        SchemaValidator.validate_json(res.json(), schema_path)
 
     @allure.story("更新部门")
     @pytest.mark.parametrize("case", load_yaml("datas/departments.yaml")["update_department"])
@@ -34,6 +41,9 @@ class TestDepartments:
         res = department_api.update(case["data"])
         assert res.status_code == 200
         AssertUtil.assert_json_value(res.json(), "$.errcode", case["expect"]["errcode"])
+        # jsonschema结构断言
+        schema_path = os.path.join(os.path.dirname(__file__), "../../schema/department_schema.json")
+        SchemaValidator.validate_json(res.json(), schema_path)
 
     @allure.story("删除部门")
     @pytest.mark.parametrize("case", load_yaml("datas/departments.yaml")["delete_department"])
@@ -44,3 +54,6 @@ class TestDepartments:
         res = department_api.delete(case["params"])
         assert res.status_code == 200
         AssertUtil.assert_json_value(res.json(), "$.errcode", case["expect"]["errcode"])
+        # jsonschema结构断言
+        schema_path = os.path.join(os.path.dirname(__file__), "../../schema/department_schema.json")
+        SchemaValidator.validate_json(res.json(), schema_path)
