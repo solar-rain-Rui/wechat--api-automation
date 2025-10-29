@@ -3,6 +3,9 @@ from jsonpath import jsonpath
 from frame.apis.wework import WeWork
 import requests
 
+from frame.common.db import DBUtil
+
+
 class Departments(WeWork):
     """
     业务接口信息的具体描述，只关注接口本身，不需要设计业务和断言
