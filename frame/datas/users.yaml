@@ -1,0 +1,48 @@
+create_user:
+  # 场景 1：正常创建成员
+  - name: 正常创建成员
+    desc: 验证可以成功创建一个成员
+    data:
+      userid: "auto_user_001" #成员id
+      name: "自动化测试员A"  #成员名称
+      mobile: "13800000001" #手机号码
+      department: [] #成员所属部门id列表
+    expect:
+      errcode: 0
+      errmsg: "created"
+
+  # 场景 2：手机号重复
+  - name: 手机号重复
+    desc: 验证使用重复手机号时返回错误
+    data:
+      userid: "auto_user_002"
+      name: "测试员B"
+      mobile: "13800000001"
+      department: [1]
+    expect:
+      errcode: 60104
+
+get_user:
+  - name: 获取已存在成员
+    data:
+      userid: "auto_user_001" #成员id
+    expect:
+      errcode: 0
+      errmsg: "ok"
+
+update_user:
+  - name: 更新成员信息
+    data:
+      userid: "auto_user_001"
+      name: "测试员A_更新"
+    expect:
+      errcode: 0
+      errmsg: "updated"
+
+delete_user:
+  - name: 删除成员
+    data:
+      userid: "auto_user_001"
+    expect:
+      errcode: 0
+      errmsg: "deleted"

@@ -45,12 +45,12 @@ class Departments(WeWork):
         r=self.send_api(req)
         return r
 
-    def delete(self,params):
+    def delete(self,depart_id):
         """
         删除部门接口
         :return:
         """
-        depart_id=params["id"]
+
         #delete_url=f"https://qyapi.weixin.qq.com/cgi-bin/department/delete?access_token={self.token}&id={depart_id}"
         delete_url=f"{self.base_url}/department/delete?access_token={self.token}&id={depart_id}"
 

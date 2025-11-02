@@ -6,10 +6,7 @@ from frame.apis.contacts.departments import Departments
 from frame.common.db import DBUtil
 
 
-@pytest.fixture(scope="session")
-def department_api(token):
-    """部门模块的 API 实例"""
-    return Departments(token=token)
+
 # 每次测试用例都会自动创建一个临时部门；
 # 测试结束后，自动删除。
 @pytest.fixture(scope="function")
@@ -29,17 +26,7 @@ def temp_department(department_api):
         print("清除临时部门")
 
 
-@pytest.fixture(scope="session")
-def db():
-    """提供数据库连接实例"""
-    db = DBUtil(
-        host="localhost",
-        user="root",
-        password="root1997",
-        database="wecom_test"
-    )
-    yield db
-    db.close()
+
 
 #结合本地数据库模拟，在执行用例前先执行对应sql语句，来验证数据库断言逻辑
 @pytest.fixture(scope="function")
@@ -60,6 +47,6 @@ def fake_department(db):
     # 2️⃣ yield 表示这里执行完之后暂停，等测试用例执行完再往下走
     yield dept_id  # 把这个部门ID提供给测试用例用
 
-    # # 3️⃣ 清理数据
-    # db.execute("DELETE FROM departments WHERE id = %s", (dept_id,))
+    # 3️⃣ 清理数据
+    db.execute("DELETE FROM departments WHERE id = %s", (dept_id,))
 
