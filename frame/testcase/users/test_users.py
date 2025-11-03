@@ -1,7 +1,11 @@
 # frame/testcase/users/test_users.py
+import os
+
 import pytest
 import allure
 import copy
+
+from frame.common.schema import SchemaValidator
 from frame.common.tools import load_yaml
 from frame.common.assertions import AssertUtil
 
@@ -31,10 +35,12 @@ class TestUsers:
         case["data"]["userid"]=temp_user
         res = user_api.get(case["data"]["userid"])
         res_json = res.json()
-
+        #jsonpath断言
         AssertUtil.assert_json_value(res_json, "$.errcode", case["expect"]["errcode"])
         AssertUtil.assert_json_value(res_json, "$.errmsg", case["expect"]["errmsg"])
-
+        # jsonschema结构断言
+        schema_path = os.path.join(os.path.dirname(__file__), "../../schema/users_schema.json")
+        SchemaValidator.validate_json(res.json(), schema_path)
     @allure.story("更新成员")
     @pytest.mark.parametrize("case", load_yaml("datas/users.yaml")["update_user"])
     def test_update_user(self, user_api, temp_user,case):
@@ -46,6 +52,9 @@ class TestUsers:
 
         AssertUtil.assert_json_value(res_json, "$.errcode", case["expect"]["errcode"])
         AssertUtil.assert_json_value(res_json, "$.errmsg", case["expect"]["errmsg"])
+        #jsonschema结构断言
+        schema_path = os.path.join(os.path.dirname(__file__), "../../schema/users_schema.json")
+        SchemaValidator.validate_json(res.json(), schema_path)
 
     @allure.story("删除成员")
     @pytest.mark.parametrize("case", load_yaml("datas/users.yaml")["delete_user"])
@@ -55,6 +64,9 @@ class TestUsers:
         case["data"]["userid"] = temp_user
         res = user_api.delete(case["data"]["userid"])
         res_json = res.json()
-
+        #jsonpath断言
         AssertUtil.assert_json_value(res_json, "$.errcode", case["expect"]["errcode"])
         AssertUtil.assert_json_value(res_json, "$.errmsg", case["expect"]["errmsg"])
+        # jsonschema结构断言
+        schema_path = os.path.join(os.path.dirname(__file__), "../../schema/users_schema.json")
+        SchemaValidator.validate_json(res.json(), schema_path)
