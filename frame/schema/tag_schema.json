@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "properties": {
+    "errcode": {"type": "integer"},
+    "errmsg": {"type": "string"}
+  },
+  "required": ["errcode", "errmsg"]
+}

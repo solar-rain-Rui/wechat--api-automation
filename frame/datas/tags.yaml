@@ -1,0 +1,36 @@
+create_tag:
+  - name: "创建普通标签"
+    desc: "创建一个普通标签"
+    data:
+      tagname: "自动化标签A"
+      tagid: 101
+    expect:
+      errcode: 0
+
+  - name: "重复创建标签"
+    desc: "使用相同 tagid 再次创建"
+    data:
+      tagname: "自动化标签A_重复"
+      tagid: 101
+    expect:
+      errcode: 40068  # tagid已存在
+
+update_tag:
+  - name: "更新标签名称"
+    desc: "修改标签名"
+    data:
+      new_tagname: "更新后的自动化标签"
+    expect:
+      errcode: 0
+
+get_tag:
+  - name: "获取标签成员"
+    desc: "获取标签下成员信息"
+    expect:
+      errcode: 0
+
+delete_tag:
+  - name: "删除标签"
+    desc: "删除已创建的标签"
+    expect:
+      errcode: 0
