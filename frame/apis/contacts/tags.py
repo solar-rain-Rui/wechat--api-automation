@@ -46,3 +46,40 @@ class Tags(WeWork):
             "params": {"access_token": self.token, "tagid": tagid}
         }
         return self.send_api(req)
+
+
+
+    @allure.step("添加标签成员")
+    def add_users(self, tagid, userlist=None, partylist=None):
+        """
+        给标签添加成员或部门
+        :param tagid: 标签 ID
+        :param userlist: 用户列表，例如 ["user1", "user2"]
+        :param partylist: 部门列表，例如 [1,2]
+        """
+        data = {"tagid": tagid}
+        if userlist is not None:
+            data["userlist"] = userlist
+        if partylist is not None:
+            data["partylist"] = partylist
+
+        req = {
+            "method": "POST",
+            "url": "https://qyapi.weixin.qq.com/cgi-bin/tag/addtagusers",
+            "params": {"access_token": self.token},
+            "json": data
+        }
+        return self.send_api(req)
+
+    @allure.step("获取标签成员")
+    def get_users(self, tagid):
+        """
+        获取标签下成员（userlist / partylist）
+        :param tagid: 标签 ID
+        """
+        req = {
+            "method": "GET",
+            "url": "https://qyapi.weixin.qq.com/cgi-bin/tag/get",
+            "params": {"access_token": self.token, "tagid": tagid}
+        }
+        return self.send_api(req)
