@@ -1,0 +1,38 @@
+2025-11-01 10:43:53,156 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-11-01 10:43:53,785 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"nzXQz8SEpNvIQdzu75bO6-xzZ-51GWGj920dwIoFhx0euSQnu3GMH7kOXjI2mVVlXHmi2bd8njGk1j598E58jURQb_G-pZnTsLs9Heo5haqhP1zpZl3E56oSw2gq3nwMIm0MFSU_ncQsQgaF5yv3d4pdWBK0PaGICFJxlMT-Y2xvzvLpa2COqE3-KARBLjtlygfgDmjQeinYmzxNIVm9-w","expires_in":7200}
+2025-11-01 10:43:53,790 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/user/create
+2025-11-01 10:43:55,081 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":60020,"errmsg":"not allow to access from your ip, hint: [1761965036437733883724126], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60020"}
+2025-11-01 10:43:55,091 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60020
+
+2025-11-01 10:43:55,139 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/user/create
+2025-11-01 10:43:55,512 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":60020,"errmsg":"not allow to access from your ip, hint: [1761965036038293707378417], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60020"}
+2025-11-01 10:43:55,512 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 60104
+实际值: 60020
+
+2025-11-01 22:44:07,313 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-11-01 22:44:07,931 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"TLKfi79L4__zSZehCJjJF4NVcGyu9rgdBTpUq9HmEJ8BTshOvBSdMLqiN9zEJO4v11pTIZ1yXi553AWtDlTkYUo2Y83tmqqcD81UBz1r4t-rO4_OAtW2FJ53doYvPmVXMbzgR0LzxqN_kiM2ZVv32WgkTXwb6GEFqvw0j6cAWKp2T5iSUKlfLI1AXsLMFqUCTvmPAdAg5pK7BeRd8l693A","expires_in":7200}
+2025-11-01 23:15:05,855 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-11-01 23:15:06,321 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"TLKfi79L4__zSZehCJjJF4NVcGyu9rgdBTpUq9HmEJ8BTshOvBSdMLqiN9zEJO4v11pTIZ1yXi553AWtDlTkYUo2Y83tmqqcD81UBz1r4t-rO4_OAtW2FJ53doYvPmVXMbzgR0LzxqN_kiM2ZVv32WgkTXwb6GEFqvw0j6cAWKp2T5iSUKlfLI1AXsLMFqUCTvmPAdAg5pK7BeRd8l693A","expires_in":7200}
+2025-11-01 23:15:06,323 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=TLKfi79L4__zSZehCJjJF4NVcGyu9rgdBTpUq9HmEJ8BTshOvBSdMLqiN9zEJO4v11pTIZ1yXi553AWtDlTkYUo2Y83tmqqcD81UBz1r4t-rO4_OAtW2FJ53doYvPmVXMbzgR0LzxqN_kiM2ZVv32WgkTXwb6GEFqvw0j6cAWKp2T5iSUKlfLI1AXsLMFqUCTvmPAdAg5pK7BeRd8l693A
+2025-11-01 23:15:07,676 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":60020,"errmsg":"not allow to access from your ip, hint: [1762010107445413123250342], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60020"}
+2025-11-01 23:15:07,678 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/user/create
+2025-11-01 23:15:08,955 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":60020,"errmsg":"not allow to access from your ip, hint: [1762010108035891586206251], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60020"}
+2025-11-01 23:15:08,955 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60020
+
+2025-11-01 23:15:09,009 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=TLKfi79L4__zSZehCJjJF4NVcGyu9rgdBTpUq9HmEJ8BTshOvBSdMLqiN9zEJO4v11pTIZ1yXi553AWtDlTkYUo2Y83tmqqcD81UBz1r4t-rO4_OAtW2FJ53doYvPmVXMbzgR0LzxqN_kiM2ZVv32WgkTXwb6GEFqvw0j6cAWKp2T5iSUKlfLI1AXsLMFqUCTvmPAdAg5pK7BeRd8l693A
+2025-11-01 23:15:09,396 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":60020,"errmsg":"not allow to access from your ip, hint: [1762010109486502715702709], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60020"}
+2025-11-01 23:15:09,397 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/user/create
+2025-11-01 23:15:10,698 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":60020,"errmsg":"not allow to access from your ip, hint: [1762010110612220521318683], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60020"}
+2025-11-01 23:15:10,698 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 60104
+实际值: 60020
+

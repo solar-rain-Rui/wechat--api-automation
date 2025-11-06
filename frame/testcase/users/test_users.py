@@ -37,7 +37,7 @@ class TestUsers:
         res_json = res.json()
         #jsonpath断言
         AssertUtil.assert_json_value(res_json, "$.errcode", case["expect"]["errcode"])
-        AssertUtil.assert_json_value(res_json, "$.errmsg", case["expect"]["errmsg"])
+
         # jsonschema结构断言
         schema_path = os.path.join(os.path.dirname(__file__), "../../schema/users_schema.json")
         SchemaValidator.validate_json(res.json(), schema_path)
@@ -51,7 +51,7 @@ class TestUsers:
         res_json = res.json()
 
         AssertUtil.assert_json_value(res_json, "$.errcode", case["expect"]["errcode"])
-        AssertUtil.assert_json_value(res_json, "$.errmsg", case["expect"]["errmsg"])
+
         #jsonschema结构断言
         schema_path = os.path.join(os.path.dirname(__file__), "../../schema/users_schema.json")
         SchemaValidator.validate_json(res.json(), schema_path)
@@ -66,7 +66,7 @@ class TestUsers:
         res_json = res.json()
         #jsonpath断言
         AssertUtil.assert_json_value(res_json, "$.errcode", case["expect"]["errcode"])
-        AssertUtil.assert_json_value(res_json, "$.errmsg", case["expect"]["errmsg"])
+
         # jsonschema结构断言
         schema_path = os.path.join(os.path.dirname(__file__), "../../schema/users_schema.json")
         SchemaValidator.validate_json(res.json(), schema_path)

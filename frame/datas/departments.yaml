@@ -1,31 +1,125 @@
 create_department:
-  - name: 正常创建部门
+  # ---- 正常用例 ----
+  - name: 正常创建一级部门
     data:
-      name: "接口测试部A"
-      name_en: "DeptA"
+      name: "自动化一级部门01"
       parentid: 1
-      id: 2001
+    expect:
+      errcode: 0
+  - name: 正常创建二级部门
+    data:
+      name: "自动化二级部门01"
+      parentid: 2
+    expect:
+      errcode: 0
+  - name: 创建含英文名部门
+    data:
+      name: "研发部"
+      name_en: "DevDept"
+      parentid: 1
+    expect:
+      errcode: 0
+  - name: 创建排序值部门
+    data:
+      name: "有序部门"
+      parentid: 1
+      order: 20
     expect:
       errcode: 0
 
-get_department:
-  - name: 查询部门
-    params:
-      id: null  # 将被 fixture 动态注入
+  # ---- 异常用例 ----
+  - name: 创建部门名称为空
+    data:
+      name: ""
+      parentid: 1
+    expect:
+      errcode: 40058
+  - name: 创建部门名称超长
+    data:
+      name: "超长部门" * 20
+      parentid: 1
+    expect:
+      errcode: 40058
+  - name: 创建重复名称部门
+    data:
+      name: "自动化一级部门01"
+      parentid: 1
+    expect:
+      errcode: 60008
+  - name: 创建重复id部门
+    data:
+      name: "重复ID部门"
+      parentid: 1
+      id: 2
+    expect:
+      errcode: 60008
+  - name: 创建部门id为负数
+    data:
+      name: "异常部门"
+      parentid: 1
+      id: -5
+    expect:
+      errcode: 40058
+  - name: 创建部门父级不存在
+    data:
+      name: "父级不存在部门"
+      parentid: 99999
+    expect:
+      errcode: 60003
+
+  # ---- 特殊字符/多语言 ----
+  - name: 创建中文+英文混合名部门
+    data:
+      name: "测试部Test"
+      parentid: 1
+    expect:
+      errcode: 0
+  - name: 创建含特殊字符部门
+    data:
+      name: "@@@###$$$"
+      parentid: 1
+    expect:
+      errcode: 40058
+  - name: 创建emoji部门
+    data:
+      name: "表情😊部门"
+      parentid: 1
     expect:
       errcode: 0
 
 update_department:
-  - name: 修改部门名称
+  - name: 正常修改部门名称
     data:
-      id: null  # 将被 fixture 动态注入
-      name: "修改后的部门名称"
+      id: 3
+      name: "修改后部门"
     expect:
       errcode: 0
+  - name: 修改部门父级
+    data:
+      id: 3
+      parentid: 1
+    expect:
+      errcode: 0
+  - name: 修改不存在的部门
+    data:
+      id: 9999
+      name: "不存在部门"
+    expect:
+      errcode: 60003
 
 delete_department:
-  - name: 删除部门
-    params:
-      id: null  # 将被 fixture 动态注入
+  - name: 正常删除部门
+    data:
+      id: 5
     expect:
       errcode: 0
+  - name: 删除根部门
+    data:
+      id: 1
+    expect:
+      errcode: 60004
+  - name: 删除不存在部门
+    data:
+      id: 99999
+    expect:
+      errcode: 60123

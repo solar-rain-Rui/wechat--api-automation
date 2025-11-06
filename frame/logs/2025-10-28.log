@@ -1,0 +1,50 @@
+2025-10-28 20:39:58,780 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-10-28 20:40:06,372 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"vJHA8P8OMUTgNGaPjBVFV-dcx01c8beGQNIanud5U65JolwR1JB6j_snHSfMYI6jxJ5sD26f_9P6L6_vMQiYEWrWH0WXug69qnst-9VN935m3wG_pYcznXfbCMTUlKC_wq0SmfedkyKXIYU9zSBCx3A93Qa8vM13MiplPjxtRG5qf0buwtHAeqwSSLuzVmrOndYFz5sfuwIEG3pAE8rSDw","expires_in":7200}
+2025-10-28 20:40:06,386 - [INFO] - db.py:20 - ✅ 成功连接数据库: wecom_test
+2025-10-28 20:40:06,387 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=vJHA8P8OMUTgNGaPjBVFV-dcx01c8beGQNIanud5U65JolwR1JB6j_snHSfMYI6jxJ5sD26f_9P6L6_vMQiYEWrWH0WXug69qnst-9VN935m3wG_pYcznXfbCMTUlKC_wq0SmfedkyKXIYU9zSBCx3A93Qa8vM13MiplPjxtRG5qf0buwtHAeqwSSLuzVmrOndYFz5sfuwIEG3pAE8rSDw
+2025-10-28 20:40:07,088 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":0,"errmsg":"created","id":2001}
+2025-10-28 20:40:07,088 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 0
+2025-10-28 20:40:07,099 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-10-28 20:40:07,101 - [ERROR] - db.py:33 - ❌ SQL 执行失败: (1146, "Table 'wecom_test.department' doesn't exist")
+2025-10-28 20:40:07,205 - [INFO] - db.py:51 - 🔒 数据库连接已关闭
+2025-10-28 20:43:04,331 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-10-28 20:43:04,777 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"vJHA8P8OMUTgNGaPjBVFV-dcx01c8beGQNIanud5U65JolwR1JB6j_snHSfMYI6jxJ5sD26f_9P6L6_vMQiYEWrWH0WXug69qnst-9VN935m3wG_pYcznXfbCMTUlKC_wq0SmfedkyKXIYU9zSBCx3A93Qa8vM13MiplPjxtRG5qf0buwtHAeqwSSLuzVmrOndYFz5sfuwIEG3pAE8rSDw","expires_in":7200}
+2025-10-28 20:43:04,783 - [INFO] - db.py:20 - ✅ 成功连接数据库: wecom_test
+2025-10-28 20:43:04,785 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=vJHA8P8OMUTgNGaPjBVFV-dcx01c8beGQNIanud5U65JolwR1JB6j_snHSfMYI6jxJ5sD26f_9P6L6_vMQiYEWrWH0WXug69qnst-9VN935m3wG_pYcznXfbCMTUlKC_wq0SmfedkyKXIYU9zSBCx3A93Qa8vM13MiplPjxtRG5qf0buwtHAeqwSSLuzVmrOndYFz5sfuwIEG3pAE8rSDw
+2025-10-28 20:43:09,960 - [INFO] - db.py:51 - 🔒 数据库连接已关闭
+2025-10-28 20:44:10,263 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-10-28 20:44:11,829 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"vJHA8P8OMUTgNGaPjBVFV-dcx01c8beGQNIanud5U65JolwR1JB6j_snHSfMYI6jxJ5sD26f_9P6L6_vMQiYEWrWH0WXug69qnst-9VN935m3wG_pYcznXfbCMTUlKC_wq0SmfedkyKXIYU9zSBCx3A93Qa8vM13MiplPjxtRG5qf0buwtHAeqwSSLuzVmrOndYFz5sfuwIEG3pAE8rSDw","expires_in":7200}
+2025-10-28 20:44:11,832 - [INFO] - db.py:20 - ✅ 成功连接数据库: wecom_test
+2025-10-28 20:44:11,842 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=vJHA8P8OMUTgNGaPjBVFV-dcx01c8beGQNIanud5U65JolwR1JB6j_snHSfMYI6jxJ5sD26f_9P6L6_vMQiYEWrWH0WXug69qnst-9VN935m3wG_pYcznXfbCMTUlKC_wq0SmfedkyKXIYU9zSBCx3A93Qa8vM13MiplPjxtRG5qf0buwtHAeqwSSLuzVmrOndYFz5sfuwIEG3pAE8rSDw
+2025-10-28 20:44:13,477 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":0,"errmsg":"created","id":2001}
+2025-10-28 20:44:13,477 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 0
+2025-10-28 20:44:13,479 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-10-28 20:44:13,480 - [INFO] - db.py:30 - 执行 SQL 查询: SELECT name FROM departments WHERE id = 2001
+2025-10-28 20:44:13,524 - [INFO] - db.py:51 - 🔒 数据库连接已关闭
+2025-10-28 20:57:34,973 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-10-28 20:57:35,472 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"vJHA8P8OMUTgNGaPjBVFV-dcx01c8beGQNIanud5U65JolwR1JB6j_snHSfMYI6jxJ5sD26f_9P6L6_vMQiYEWrWH0WXug69qnst-9VN935m3wG_pYcznXfbCMTUlKC_wq0SmfedkyKXIYU9zSBCx3A93Qa8vM13MiplPjxtRG5qf0buwtHAeqwSSLuzVmrOndYFz5sfuwIEG3pAE8rSDw","expires_in":7200}
+2025-10-28 20:57:35,476 - [INFO] - db.py:20 - ✅ 成功连接数据库: wecom_test
+2025-10-28 20:57:35,486 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=vJHA8P8OMUTgNGaPjBVFV-dcx01c8beGQNIanud5U65JolwR1JB6j_snHSfMYI6jxJ5sD26f_9P6L6_vMQiYEWrWH0WXug69qnst-9VN935m3wG_pYcznXfbCMTUlKC_wq0SmfedkyKXIYU9zSBCx3A93Qa8vM13MiplPjxtRG5qf0buwtHAeqwSSLuzVmrOndYFz5sfuwIEG3pAE8rSDw
+2025-10-28 20:57:36,062 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":0,"errmsg":"created","id":2001}
+2025-10-28 20:57:36,107 - [INFO] - db.py:51 - 🔒 数据库连接已关闭
+2025-10-28 21:07:08,991 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-10-28 21:07:09,454 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"vJHA8P8OMUTgNGaPjBVFV-dcx01c8beGQNIanud5U65JolwR1JB6j_snHSfMYI6jxJ5sD26f_9P6L6_vMQiYEWrWH0WXug69qnst-9VN935m3wG_pYcznXfbCMTUlKC_wq0SmfedkyKXIYU9zSBCx3A93Qa8vM13MiplPjxtRG5qf0buwtHAeqwSSLuzVmrOndYFz5sfuwIEG3pAE8rSDw","expires_in":7200}
+2025-10-28 21:07:09,460 - [INFO] - db.py:20 - ✅ 成功连接数据库: wecom_test
+2025-10-28 21:07:09,463 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=vJHA8P8OMUTgNGaPjBVFV-dcx01c8beGQNIanud5U65JolwR1JB6j_snHSfMYI6jxJ5sD26f_9P6L6_vMQiYEWrWH0WXug69qnst-9VN935m3wG_pYcznXfbCMTUlKC_wq0SmfedkyKXIYU9zSBCx3A93Qa8vM13MiplPjxtRG5qf0buwtHAeqwSSLuzVmrOndYFz5sfuwIEG3pAE8rSDw
+2025-10-28 21:07:10,076 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":0,"errmsg":"created","id":2001}
+2025-10-28 21:07:10,129 - [INFO] - db.py:51 - 🔒 数据库连接已关闭
+2025-10-28 21:17:58,368 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-10-28 21:17:58,911 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"vJHA8P8OMUTgNGaPjBVFV-dcx01c8beGQNIanud5U65JolwR1JB6j_snHSfMYI6jxJ5sD26f_9P6L6_vMQiYEWrWH0WXug69qnst-9VN935m3wG_pYcznXfbCMTUlKC_wq0SmfedkyKXIYU9zSBCx3A93Qa8vM13MiplPjxtRG5qf0buwtHAeqwSSLuzVmrOndYFz5sfuwIEG3pAE8rSDw","expires_in":7200}
+2025-10-28 21:17:58,917 - [INFO] - db.py:20 - ✅ 成功连接数据库: wecom_test
+2025-10-28 21:17:58,919 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=vJHA8P8OMUTgNGaPjBVFV-dcx01c8beGQNIanud5U65JolwR1JB6j_snHSfMYI6jxJ5sD26f_9P6L6_vMQiYEWrWH0WXug69qnst-9VN935m3wG_pYcznXfbCMTUlKC_wq0SmfedkyKXIYU9zSBCx3A93Qa8vM13MiplPjxtRG5qf0buwtHAeqwSSLuzVmrOndYFz5sfuwIEG3pAE8rSDw
+2025-10-28 21:17:59,561 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":0,"errmsg":"created","id":2001}
+2025-10-28 21:17:59,565 - [INFO] - db.py:20 - ✅ 成功连接数据库: wecom_test
+2025-10-28 21:17:59,612 - [INFO] - db.py:51 - 🔒 数据库连接已关闭
+2025-10-28 21:33:04,405 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-10-28 21:33:05,902 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"vJHA8P8OMUTgNGaPjBVFV-dcx01c8beGQNIanud5U65JolwR1JB6j_snHSfMYI6jxJ5sD26f_9P6L6_vMQiYEWrWH0WXug69qnst-9VN935m3wG_pYcznXfbCMTUlKC_wq0SmfedkyKXIYU9zSBCx3A93Qa8vM13MiplPjxtRG5qf0buwtHAeqwSSLuzVmrOndYFz5sfuwIEG3pAE8rSDw","expires_in":7200}
+2025-10-28 21:33:05,908 - [INFO] - db.py:20 - ✅ 成功连接数据库: wecom_test
+2025-10-28 21:33:05,947 - [INFO] - db.py:51 - 🔒 数据库连接已关闭
+2025-10-28 21:33:36,118 - [INFO] - base_api.py:16 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-10-28 21:33:36,591 - [INFO] - base_api.py:18 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"vJHA8P8OMUTgNGaPjBVFV-dcx01c8beGQNIanud5U65JolwR1JB6j_snHSfMYI6jxJ5sD26f_9P6L6_vMQiYEWrWH0WXug69qnst-9VN935m3wG_pYcznXfbCMTUlKC_wq0SmfedkyKXIYU9zSBCx3A93Qa8vM13MiplPjxtRG5qf0buwtHAeqwSSLuzVmrOndYFz5sfuwIEG3pAE8rSDw","expires_in":7200}
+2025-10-28 21:33:36,599 - [INFO] - db.py:20 - ✅ 成功连接数据库: wecom_test
+2025-10-28 21:33:36,648 - [INFO] - db.py:51 - 🔒 数据库连接已关闭
