@@ -1,3 +1,4 @@
+#测试环境
 #把接口测试相关的配置数据提取出来，在yaml文件中进行保存
 base_url: https://qyapi.weixin.qq.com/cgi-bin
 #提取相关账户信息
