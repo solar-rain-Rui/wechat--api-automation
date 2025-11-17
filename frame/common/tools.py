@@ -1,6 +1,11 @@
 import os
 import yaml
 
+# 全局列表，用来记录测试创建的部门 ID
+CREATED_DEPT_IDS = []
+# 记录用户ID
+CREATED_USER_IDS = []
+
 def get_frame_root():
     # 返回 frame 目录的绝对路径
     return os.path.dirname(os.path.dirname(__file__))

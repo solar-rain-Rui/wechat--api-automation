@@ -2,7 +2,7 @@ from jsonpath import jsonpath
 
 from frame.apis.wework import WeWork
 import requests
-
+from frame.common.logger import log
 from frame.common.db import DBUtil
 
 
@@ -16,16 +16,18 @@ class Departments(WeWork):
         创建部门接口
         :return:
         """
+        # 先执行清理
+        #self.clean_before_create(data)
         #create_url = f"https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token={self.token}"#token?
         create_url = f"{self.base_url}/department/create?access_token={self.token}"#token?
 
-        #r=requests.request("POST", create_url, json=data)
         req={
             "method": "POST",
             "url": create_url,
             "json": data
         }
         r=self.send_api(req)
+
         return r
 
     def update(self,data):
@@ -72,10 +74,20 @@ class Departments(WeWork):
         #r=requests.request("GET", get_url)
         req={
             "method": "GET",
-            "url": get_url
+            "url": get_url,
+            "params": params
         }
         r=self.send_api(req)
         return r
+
+    def list_all(self):
+        return self.send_api({
+            "method": "GET",
+            "url": "https://qyapi.weixin.qq.com/cgi-bin/department/simplelist",
+            "params": {
+                "access_token": self.token
+            }
+        })
 
     # def clear(self):
     #     """

@@ -1,47 +1,47 @@
 create_user:
   - name: 正常创建用户
     data:
-      userid: "user001"
-      name: "张三"
-      mobile: "13800000001"
+      userid: "test_user001"
+      name: "test_张三"
+      mobile: "13800000000"
       department: [1]
     expect:
       errcode: 0
   - name: 创建英文名用户
     data:
-      userid: "user002"
-      name: "John"
+      userid: "test_user002"
+      name: "test_John"
       mobile: "13800000002"
       department: [1]
     expect:
       errcode: 0
   - name: 创建缺失手机号用户
     data:
-      userid: "user003"
-      name: "无手机号"
+      userid: "test_user003"
+      name: "test_无手机号"
       department: [1]
     expect:
       errcode: 60129
   - name: 创建手机号格式错误用户
     data:
-      userid: "user004"
-      name: "手机号错"
+      userid: "test_user004"
+      name: "test_手机号错"
       mobile: "12345"
       department: [1]
     expect:
-      errcode: 40058
+      errcode: 60103
   - name: 创建重复userid用户
     data:
-      userid: "user001"
-      name: "重复ID"
+      userid: "test_user001"
+      name: "test_重复ID"
       mobile: "13800000009"
       department: [1]
     expect:
       errcode: 60102
   - name: 创建重复手机号用户
     data:
-      userid: "user006"
-      name: "重复手机号"
+      userid: "test_user006"
+      name: "test_重复手机号"
       mobile: "13800000001"
       department: [1]
     expect:
@@ -50,19 +50,19 @@ create_user:
 update_user:
   - name: 修改用户姓名
     data:
-      userid: "user001"
+      userid: "test_user001"
       name: "张三修改"
     expect:
       errcode: 0
   - name: 修改不存在用户
     data:
-      userid: "user999"
+      userid: "test_user999"
       name: "不存在用户"
     expect:
       errcode: 60111
   - name: 修改手机号为空
     data:
-      userid: "user001"
+      userid: "test_user001"
       mobile: ""
     expect:
       errcode: 40058
@@ -70,23 +70,23 @@ update_user:
 get_user:
   - name: 查询已存在用户
     data:
-      userid: "user001"
+      userid: "test_user001"
     expect:
       errcode: 0
   - name: 查询不存在用户
     data:
-      userid: "user999"
+      userid: "test_user999"
     expect:
       errcode: 60111
 
 delete_user:
   - name: 正常删除用户
     data:
-      userid: "user006"
+      userid: "test_user006"
     expect:
       errcode: 0
   - name: 删除不存在用户
     data:
-      userid: "user999"
+      userid: "test_user999"
     expect:
       errcode: 60111

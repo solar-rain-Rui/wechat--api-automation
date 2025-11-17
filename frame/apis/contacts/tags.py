@@ -1,4 +1,5 @@
-# frame/api/tags.py
+print(">>> LOADING Tags CLASS FROM:", __file__)
+
 import allure
 from frame.apis.wework import WeWork
 from frame.common.logger import log
@@ -19,8 +20,8 @@ class Tags(WeWork):
         return self.send_api(req)
 
     @allure.step("更新标签")
-    def update(self, tagid, new_name):
-        data = {"tagid": tagid, "tagname": new_name}
+    def update(self, tagid, tagname):
+        data = {"tagid": tagid, "tagname": tagname}
         req = {
             "method": "POST",
             "url": "https://qyapi.weixin.qq.com/cgi-bin/tag/update",
@@ -81,5 +82,15 @@ class Tags(WeWork):
             "method": "GET",
             "url": "https://qyapi.weixin.qq.com/cgi-bin/tag/get",
             "params": {"access_token": self.token, "tagid": tagid}
+        }
+        return self.send_api(req)
+
+    def list(self):
+        req = {
+            "method": "GET",
+            "url": "https://qyapi.weixin.qq.com/cgi-bin/tag/list",
+            "params": {
+                "access_token": self.token
+            }
         }
         return self.send_api(req)

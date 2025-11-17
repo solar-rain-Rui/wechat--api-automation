@@ -48,3 +48,20 @@ class Users(WeWork):
             }
         }
         return self.send_api(req)
+
+    def list(self, department_id=1, fetch_child=1):
+        """
+        获取部门用户列表
+        官方必须传 department_id，不存在查全量用户接口
+        """
+        return self.send_api({
+            "method": "GET",
+            "url": "https://qyapi.weixin.qq.com/cgi-bin/user/list",
+            "params": {
+                "access_token": self.token,
+                "department_id": department_id,
+                "fetch_child": fetch_child
+            }
+        })
+
+

@@ -17,19 +17,19 @@ class TestTags:
         SchemaValidator.validate_json(res.json(), "frame/schema/tag_schema.json")
 
     @pytest.mark.parametrize("case", load_yaml("datas/tags.yaml")["update_tag"])
-    def test_update_tag(self, tag_api,case,temp_tag):
-        res = tag_api.update(temp_tag,"修改后的临时标签")
+    def test_update_tag(self, tag_api,case):
+        res = tag_api.update(**case["data"])
         AssertUtil.assert_json_value(res.json(), "$.errcode", 0)
         SchemaValidator.validate_json(res.json(), "frame/schema/tag_schema.json")
 
-    @pytest.mark.parametrize("case", load_yaml("datas/tags.yaml")["get_tag_list"])
-    def test_get_tag(self, tag_api, case,temp_tag):
-        res = tag_api.get(temp_tag)
+    @pytest.mark.parametrize("case", load_yaml("datas/tags.yaml")["get_tag"])
+    def test_get_tag(self, tag_api, case):
+        res = tag_api.get(**case["data"])
         AssertUtil.assert_json_value(res.json(), "$.errcode", 0)
         SchemaValidator.validate_json(res.json(), "frame/schema/tag_schema.json")
 
     @pytest.mark.parametrize("case", load_yaml("datas/tags.yaml")["delete_tag"])
-    def test_delete_tag(self, tag_api, case,temp_tag):
-        res = tag_api.delete(temp_tag)
+    def test_delete_tag(self, tag_api, case):
+        res = tag_api.delete(**case["data"])
         AssertUtil.assert_json_value(res.json(), "$.errcode", 0)
         SchemaValidator.validate_json(res.json(), "frame/schema/tag_schema.json")

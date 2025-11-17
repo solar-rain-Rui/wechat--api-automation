@@ -47,6 +47,9 @@ class WeWork(BaseApi):
         # 提取响应体中的access_token值
         token = r.json().get("access_token")
         print(f"获取到的token值为{token}")
+        print(f"状态码: {r.status_code}")
+        print(f"响应体: {r.text}")
+
         return token
 
     # def get_config(self):
