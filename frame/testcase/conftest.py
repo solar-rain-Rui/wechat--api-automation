@@ -19,7 +19,7 @@ from frame.setup.prepare_test_data import prepare_all_test_data
 def prepare_env_data():
     """在整个测试会话开始前准备数据"""
     log.info("开始执行环境数据准备...")
-    prepare_all_test_data(departments=False, users=False, tags=False)
+    prepare_all_test_data(departments=True, users=True, tags=True)
     log.info("环境数据准备完成。")
 
 
