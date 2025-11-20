@@ -8,7 +8,7 @@ from frame.apis.contacts.tags import Tags
 from frame.common.logger import log
 from frame.common.tools import CREATED_DEPT_IDS, CREATED_USER_IDS
 
-
+@allure.epic("企业微信接口自动化")
 @allure.feature("企业微信主链路冒烟测试")
 class TestSmokeMain:
     @allure.story("部门→用户→标签 主链路验证")

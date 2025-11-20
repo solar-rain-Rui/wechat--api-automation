@@ -6,6 +6,7 @@ from frame.common.tools import load_yaml  # 假设你有这个加载函数
 print("🧩 create_tag cases:", load_yaml("datas/tags.yaml")["create_tag"])
 print("🧩 update_tag cases:", load_yaml("datas/tags.yaml")["update_tag"])
 
+@allure.epic("企业微信接口自动化")
 @allure.feature("标签管理模块")
 class TestTags:
     @pytest.mark.parametrize("case", load_yaml("datas/tags.yaml")["create_tag"])

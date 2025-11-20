@@ -1,7 +1,11 @@
 import pytest
+import allure
 from frame.common.logger import log
 
-
+@allure.epic("企业微信接口自动化")
+@allure.feature("部门管理")
+@allure.story("部门业务流：创建 → 修改 → 查询 → 删除")
+@allure.severity(allure.severity_level.CRITICAL)
 class TestDepartmentsFlow:
     """
     部门模块 - 业务流测试

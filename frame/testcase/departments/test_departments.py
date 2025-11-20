@@ -8,7 +8,7 @@ from frame.common.assertions import AssertUtil
 from frame.common.schema import SchemaValidator
 from frame.common.tools import CREATED_DEPT_IDS
 
-
+@allure.epic("企业微信接口自动化")
 @allure.feature("部门管理")
 class TestDepartments:
 

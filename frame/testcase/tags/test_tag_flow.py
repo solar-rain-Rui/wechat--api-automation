@@ -1,6 +1,11 @@
 import pytest
+import allure
 from frame.common.logger import log
 
+@allure.epic("企业微信接口自动化")
+@allure.feature("标签管理")
+@allure.story("标签业务流：创建 → 更新 → 查询 → 删除")
+@allure.severity(allure.severity_level.CRITICAL)
 @pytest.mark.flow
 class TestTagFlow:
     """
