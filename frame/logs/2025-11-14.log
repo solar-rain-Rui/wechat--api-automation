@@ -1,0 +1,990 @@
+2025-11-14 10:28:57,513 - [INFO] - conftest.py:17 - 开始执行环境数据准备...
+2025-11-14 10:28:57,513 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-11-14 10:28:58,216 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ","expires_in":7200}
+2025-11-14 10:28:58,220 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:28:58,760 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","department_id":[{"id":1,"parentid":0,"order":100000000},{"id":2,"parentid":1,"order":100000000},{"id":3,"parentid":1,"order":99999000},{"id":4,"parentid":1,"order":99998000},{"id":6,"parentid":1,"order":99996000},{"id":7,"parentid":1,"order":99995000},{"id":8,"parentid":1,"order":99994000},{"id":9,"parentid":1,"order":99993000},{"id":10,"parentid":2,"order":100000000},{"id":11,"parentid":1,"order":99992000},{"id":12,"parentid":1,"order":20},{"id":13,"parentid":1,"order":19},{"id":14,"parentid":1,"order":18},{"id":15,"parentid":1,"order":17}]}
+2025-11-14 10:28:58,766 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:28:59,421 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"created","id":16}
+2025-11-14 10:28:59,421 - [INFO] - prepare_test_data.py:34 - ✅ 为 delete_department 预置部门: YAML写id=2 实际id=16
+2025-11-14 10:28:59,421 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:28:59,957 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763087341038293263179724], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:28:59,958 - [INFO] - prepare_test_data.py:34 - ✅ 为 delete_department 预置部门: YAML写id=99999 实际id=None
+2025-11-14 10:28:59,958 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:00,521 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"created","id":17}
+2025-11-14 10:29:00,522 - [INFO] - prepare_test_data.py:34 - ✅ 为 update_department 预置部门: YAML写id=2 实际id=17
+2025-11-14 10:29:00,522 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:01,963 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763087343442851683950862], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:29:01,963 - [INFO] - prepare_test_data.py:34 - ✅ 为 update_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 10:29:01,963 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:02,422 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763087343437731679501210], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:29:02,423 - [INFO] - prepare_test_data.py:34 - ✅ 为 update_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 10:29:02,424 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:02,912 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763087344345571083440180], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:29:02,914 - [INFO] - prepare_test_data.py:34 - ✅ 为 get_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 10:29:02,914 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:04,503 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"created","id":18}
+2025-11-14 10:29:04,505 - [INFO] - prepare_test_data.py:34 - ✅ 为 get_department 预置部门: YAML写id=99999 实际id=18
+2025-11-14 10:29:04,508 - [INFO] - prepare_test_data.py:92 - 跳过用户数据准备
+2025-11-14 10:29:04,508 - [INFO] - prepare_test_data.py:96 - 跳过标签数据准备
+2025-11-14 10:29:04,508 - [INFO] - prepare_test_data.py:97 - ========== 测试数据准备完成 ==========
+2025-11-14 10:29:04,508 - [INFO] - conftest.py:19 - 环境数据准备完成。
+2025-11-14 10:29:04,508 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-11-14 10:29:05,338 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ","expires_in":7200}
+2025-11-14 10:29:05,344 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:08,897 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763087350445412402159118], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:29:08,898 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 10:29:09,100 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:09,573 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763087350448153678392258], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:29:09,573 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 10:29:09,585 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:10,087 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763087351192270653227972], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:29:10,087 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 10:29:10,092 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:10,633 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763087351197391859484245], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:29:10,633 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 10:29:10,641 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:11,099 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"name exceed min utf8 words 1. invalid Request Parameter, hint: [1763087352184590255670959], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 10:29:11,099 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 10:29:11,102 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:29:11,105 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:11,555 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"name exceed max utf8 words 64. invalid Request Parameter, hint: [1763087352603993951101460], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 10:29:11,555 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 10:29:11,555 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:29:11,557 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:13,026 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763087354197390379048752], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:29:13,026 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 60008
+2025-11-14 10:29:13,027 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:29:13,029 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:13,494 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763087354022871314759265], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:29:13,494 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 60008
+2025-11-14 10:29:13,495 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:29:13,497 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:13,976 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"field `id` expect type `uint32`. invalid Request Parameter, hint: [1763087355611671510350578], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 10:29:13,976 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 10:29:13,977 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:29:13,979 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:14,411 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60004,"errmsg":"parent department not found, hint: [1763087355204411641500472], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60004"}
+2025-11-14 10:29:14,411 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 60004
+2025-11-14 10:29:14,412 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:29:14,415 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:14,937 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763087356496743813366845], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:29:14,937 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 40058
+实际值: 60008
+
+2025-11-14 10:29:14,949 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:15,754 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763087356194833772316566], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:29:15,754 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 10:29:15,764 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:16,506 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763087357378853394711871], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:29:16,506 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 10:29:16,517 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:16,984 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","department_id":[{"id":2,"parentid":1,"order":100000000},{"id":10,"parentid":2,"order":100000000}]}
+2025-11-14 10:29:16,985 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 0
+2025-11-14 10:29:16,986 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:29:16,989 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:17,672 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60123,"errmsg":"invalid party id, hint: [1763087358609663413126929], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60123","department_id":[]}
+2025-11-14 10:29:17,672 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 60111
+实际值: 60123
+
+2025-11-14 10:29:17,683 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/update?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:18,416 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"updated"}
+2025-11-14 10:29:18,417 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 0
+2025-11-14 10:29:18,418 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:29:18,420 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/update?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:18,871 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60124,"errmsg":"invalid parent party id, hint: [1763087360345570355574222], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60124"}
+2025-11-14 10:29:18,871 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 60004
+实际值: 60124
+
+2025-11-14 10:29:18,881 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/update?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:29:19,338 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"name exceed min utf8 words 1. invalid Request Parameter, hint: [1763087360606550460929293], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 10:29:19,338 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 10:29:19,339 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:29:19,343 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/delete?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ&id=2
+2025-11-14 10:29:19,884 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60006,"errmsg":"department contains sub-department, hint: [1763087360445592182899847], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60006"}
+2025-11-14 10:29:19,884 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60006
+
+2025-11-14 10:29:19,894 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/delete?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ&id=1
+2025-11-14 10:29:20,653 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60005,"errmsg":"department contains user, hint: [1763087361025433065954476], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60005"}
+2025-11-14 10:29:20,653 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 60005
+2025-11-14 10:29:20,654 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:29:20,658 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/delete?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ&id=99999
+2025-11-14 10:29:21,145 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60123,"errmsg":"invalid party id, hint: [1763087362617341205935021], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60123"}
+2025-11-14 10:29:21,145 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 60111
+实际值: 60123
+
+2025-11-14 10:57:54,785 - [INFO] - conftest.py:17 - 开始执行环境数据准备...
+2025-11-14 10:57:54,785 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-11-14 10:57:56,330 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ","expires_in":7200}
+2025-11-14 10:57:56,340 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:57:57,866 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","department_id":[{"id":1,"parentid":0,"order":100000000},{"id":16,"parentid":1,"order":16},{"id":3,"parentid":1,"order":99999000},{"id":4,"parentid":1,"order":99998000},{"id":6,"parentid":1,"order":99996000},{"id":7,"parentid":1,"order":99995000},{"id":8,"parentid":1,"order":99994000},{"id":18,"parentid":1,"order":14},{"id":17,"parentid":1,"order":15},{"id":11,"parentid":1,"order":99992000},{"id":13,"parentid":1,"order":19}]}
+2025-11-14 10:57:57,875 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:57:58,327 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763089079182032331849766], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:57:58,328 - [INFO] - prepare_test_data.py:34 - ✅ 为 delete_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 10:57:58,328 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:57:58,752 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763089079358772288161498], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:57:58,754 - [INFO] - prepare_test_data.py:34 - ✅ 为 delete_department 预置部门: YAML写id=99999 实际id=None
+2025-11-14 10:57:58,755 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:57:59,201 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763089080499300501629165], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:57:59,202 - [INFO] - prepare_test_data.py:34 - ✅ 为 update_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 10:57:59,202 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:57:59,711 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763089080552650496872099], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:57:59,712 - [INFO] - prepare_test_data.py:34 - ✅ 为 update_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 10:57:59,712 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:58:00,225 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763089081035893147292087], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:58:00,226 - [INFO] - prepare_test_data.py:34 - ✅ 为 update_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 10:58:00,226 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:58:00,706 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763089081593750428019372], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:58:00,707 - [INFO] - prepare_test_data.py:34 - ✅ 为 get_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 10:58:00,707 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:58:02,177 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763089083445592406111766], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:58:02,178 - [INFO] - prepare_test_data.py:34 - ✅ 为 get_department 预置部门: YAML写id=99999 实际id=None
+2025-11-14 10:58:02,181 - [INFO] - prepare_test_data.py:92 - 跳过用户数据准备
+2025-11-14 10:58:02,181 - [INFO] - prepare_test_data.py:96 - 跳过标签数据准备
+2025-11-14 10:58:02,181 - [INFO] - prepare_test_data.py:97 - ========== 测试数据准备完成 ==========
+2025-11-14 10:58:02,181 - [INFO] - conftest.py:19 - 环境数据准备完成。
+2025-11-14 10:58:02,181 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-11-14 10:58:02,730 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ","expires_in":7200}
+2025-11-14 10:58:02,748 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:58:03,312 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"created","id":19}
+2025-11-14 10:58:03,315 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 0
+2025-11-14 10:58:03,317 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:58:03,320 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:58:03,841 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60004,"errmsg":"parent department not found, hint: [1763089085614671258051461], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60004"}
+2025-11-14 10:58:03,841 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60004
+
+2025-11-14 10:58:03,878 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:58:04,423 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763089085353650168557740], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:58:04,424 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 10:58:04,431 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:58:05,966 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"created","id":20}
+2025-11-14 10:58:05,966 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 0
+2025-11-14 10:58:05,967 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:58:05,969 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:58:06,526 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"name exceed min utf8 words 1. invalid Request Parameter, hint: [1763089087501863406326673], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 10:58:06,526 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 10:58:06,528 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:58:06,532 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:58:07,016 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"name exceed max utf8 words 64. invalid Request Parameter, hint: [1763089088189710240556393], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 10:58:07,016 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 10:58:07,017 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:58:07,019 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:58:07,494 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763089088611671293714108], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:58:07,494 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 60008
+2025-11-14 10:58:07,496 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:58:07,500 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:58:08,089 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"created","id":2}
+2025-11-14 10:58:08,090 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 60008
+实际值: 0
+
+2025-11-14 10:58:08,100 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:58:08,719 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"field `id` expect type `uint32`. invalid Request Parameter, hint: [1763089089617230333961908], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 10:58:08,720 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 10:58:08,721 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:58:08,724 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:58:09,460 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60004,"errmsg":"parent department not found, hint: [1763089090445410396273464], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60004"}
+2025-11-14 10:58:09,460 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 60004
+2025-11-14 10:58:09,461 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:58:09,463 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:58:11,080 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"created","id":21}
+2025-11-14 10:58:11,080 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 40058
+实际值: 0
+
+2025-11-14 10:58:11,089 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:58:11,703 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"created","id":22}
+2025-11-14 10:58:11,703 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 0
+2025-11-14 10:58:11,705 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:58:11,709 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:58:12,302 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763089093448151641686055], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 10:58:12,303 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 10:58:12,314 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:58:12,801 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","department_id":[{"id":2,"parentid":1,"order":12}]}
+2025-11-14 10:58:12,802 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 0
+2025-11-14 10:58:12,804 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:58:12,808 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:58:13,214 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60123,"errmsg":"invalid party id, hint: [1763089094430052265449832], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60123","department_id":[]}
+2025-11-14 10:58:13,214 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 60111
+实际值: 60123
+
+2025-11-14 10:58:13,225 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/update?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:58:16,810 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"updated"}
+2025-11-14 10:58:16,811 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 0
+2025-11-14 10:58:16,813 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:58:16,817 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/update?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:58:17,292 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60124,"errmsg":"invalid parent party id, hint: [1763089098489063805581991], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60124"}
+2025-11-14 10:58:17,293 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 60004
+实际值: 60124
+
+2025-11-14 10:58:17,307 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/update?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ
+2025-11-14 10:58:17,826 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"name exceed min utf8 words 1. invalid Request Parameter, hint: [1763089099194170424197853], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 10:58:17,826 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 10:58:17,827 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:58:17,829 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/delete?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ&id=2
+2025-11-14 10:58:18,403 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"deleted"}
+2025-11-14 10:58:18,403 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 0
+2025-11-14 10:58:18,404 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:58:18,405 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/delete?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ&id=1
+2025-11-14 10:58:19,933 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60005,"errmsg":"department contains user, hint: [1763089101445412968169035], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60005"}
+2025-11-14 10:58:19,933 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 60005
+2025-11-14 10:58:19,934 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 10:58:19,938 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/delete?access_token=rNjh8XBKbRnIEkCFvtU0rHP3oHaM0Lm9kwkKj-wghFHOyQtPnaIYOmDIWFp_N7rQuHSZxUiC4B5MlnaxwamhWA0WphlfYCtUnb_fnvFvnDjLY0f7mxq-f99Ok7JNetQehjBR7PuDtzkSGbe3ygSrn3paDFd-PTkoaOXx9QeJFKPI5dX3ROOd7bP44GKtc9-sjMu9y-ZPU08CRqKimS0FtQ&id=99999
+2025-11-14 10:58:20,325 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60123,"errmsg":"invalid party id, hint: [1763089101609112037477222], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60123"}
+2025-11-14 10:58:20,325 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 60111
+实际值: 60123
+
+2025-11-14 11:29:18,442 - [INFO] - conftest.py:17 - 开始执行环境数据准备...
+2025-11-14 11:29:18,442 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-11-14 11:29:19,026 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg","expires_in":7200}
+2025-11-14 11:29:19,028 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:29:20,532 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","department_id":[{"id":1,"parentid":0,"order":100000000},{"id":16,"parentid":1,"order":16},{"id":3,"parentid":1,"order":99999000},{"id":4,"parentid":1,"order":99998000},{"id":6,"parentid":1,"order":99996000},{"id":7,"parentid":1,"order":99995000},{"id":8,"parentid":1,"order":99994000},{"id":18,"parentid":1,"order":14},{"id":17,"parentid":1,"order":15},{"id":11,"parentid":1,"order":99992000},{"id":13,"parentid":1,"order":19},{"id":19,"parentid":1,"order":13},{"id":20,"parentid":1,"order":20},{"id":22,"parentid":1,"order":10},{"id":21,"parentid":1,"order":11}]}
+2025-11-14 11:29:20,538 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:29:21,028 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763090962445593232837152], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:34:47,561 - [INFO] - conftest.py:17 - 开始执行环境数据准备...
+2025-11-14 11:34:47,561 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-11-14 11:34:48,068 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg","expires_in":7200}
+2025-11-14 11:34:48,078 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:34:48,562 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","department_id":[{"id":1,"parentid":0,"order":100000000},{"id":16,"parentid":1,"order":16},{"id":3,"parentid":1,"order":99999000},{"id":4,"parentid":1,"order":99998000},{"id":6,"parentid":1,"order":99996000},{"id":7,"parentid":1,"order":99995000},{"id":8,"parentid":1,"order":99994000},{"id":18,"parentid":1,"order":14},{"id":17,"parentid":1,"order":15},{"id":11,"parentid":1,"order":99992000},{"id":13,"parentid":1,"order":19},{"id":19,"parentid":1,"order":13},{"id":20,"parentid":1,"order":20},{"id":22,"parentid":1,"order":10},{"id":21,"parentid":1,"order":11}]}
+2025-11-14 11:34:48,571 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:34:49,078 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763091290199951081816897], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:37:27,478 - [INFO] - conftest.py:17 - 开始执行环境数据准备...
+2025-11-14 11:37:27,478 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-11-14 11:37:27,963 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg","expires_in":7200}
+2025-11-14 11:37:27,967 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:28,445 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","department_id":[{"id":1,"parentid":0,"order":100000000},{"id":16,"parentid":1,"order":16},{"id":3,"parentid":1,"order":99999000},{"id":4,"parentid":1,"order":99998000},{"id":6,"parentid":1,"order":99996000},{"id":7,"parentid":1,"order":99995000},{"id":8,"parentid":1,"order":99994000},{"id":18,"parentid":1,"order":14},{"id":17,"parentid":1,"order":15},{"id":11,"parentid":1,"order":99992000},{"id":13,"parentid":1,"order":19},{"id":19,"parentid":1,"order":13},{"id":20,"parentid":1,"order":20},{"id":22,"parentid":1,"order":10},{"id":21,"parentid":1,"order":11}]}
+2025-11-14 11:37:28,456 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:28,872 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763091450552652091496846], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:37:28,872 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:29,335 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763091450496742513476062], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:37:29,337 - [INFO] - prepare_test_data.py:34 - ✅ 为 delete_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 11:37:29,337 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:30,785 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763091452035893544911412], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:37:30,785 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:31,271 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763091452351092754631212], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:37:31,273 - [INFO] - prepare_test_data.py:34 - ✅ 为 delete_department 预置部门: YAML写id=99999 实际id=None
+2025-11-14 11:37:31,273 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:31,695 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763091453356211197098462], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:37:31,695 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:33,224 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763091454199950297322864], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:37:33,226 - [INFO] - prepare_test_data.py:34 - ✅ 为 update_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 11:37:33,226 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:33,641 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763091454550094283641000], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:37:33,642 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:34,128 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763091455499300131958198], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:37:34,132 - [INFO] - prepare_test_data.py:34 - ✅ 为 update_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 11:37:34,132 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:34,592 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763091455617343281148298], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:37:34,592 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:36,074 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763091457557773769856875], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:37:36,076 - [INFO] - prepare_test_data.py:34 - ✅ 为 update_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 11:37:36,076 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:36,478 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763091457606551081697472], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:37:36,478 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:36,912 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763091458184592577241805], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:37:36,916 - [INFO] - prepare_test_data.py:34 - ✅ 为 get_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 11:37:36,916 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:38,378 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763091459617232620947704], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:37:38,379 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:39,878 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763091461194831287814257], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:37:39,882 - [INFO] - prepare_test_data.py:34 - ✅ 为 get_department 预置部门: YAML写id=99999 实际id=None
+2025-11-14 11:37:39,886 - [INFO] - prepare_test_data.py:92 - 跳过用户数据准备
+2025-11-14 11:37:39,886 - [INFO] - prepare_test_data.py:96 - 跳过标签数据准备
+2025-11-14 11:37:39,886 - [INFO] - prepare_test_data.py:97 - ========== 测试数据准备完成 ==========
+2025-11-14 11:37:39,886 - [INFO] - conftest.py:19 - 环境数据准备完成。
+2025-11-14 11:37:39,886 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-11-14 11:37:40,482 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg","expires_in":7200}
+2025-11-14 11:37:40,495 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:40,864 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763091462593753940394961], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:37:40,865 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:41,331 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763091462442853600963995], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:37:41,334 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 11:37:41,371 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:41,730 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763091463197391801970174], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:37:41,730 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:43,193 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763091464176913564742810], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:37:43,194 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 11:37:43,202 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:43,587 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763091464617341760002648], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:37:43,587 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:44,040 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763091465353652753024691], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:37:44,041 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 11:37:44,050 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:45,511 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763091466501864010405405], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:37:45,511 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:45,911 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"name exceed min utf8 words 1. invalid Request Parameter, hint: [1763091467197393493930145], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 11:37:45,911 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 11:37:45,913 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:37:45,915 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:46,329 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763091467437730491216819], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:37:46,330 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:46,765 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"name exceed max utf8 words 64. invalid Request Parameter, hint: [1763091468437730211822142], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 11:37:46,768 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 11:37:46,770 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:37:46,774 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:47,201 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763091468022871747273902], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:37:47,202 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:47,722 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763091468201850005724966], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:37:47,723 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 60008
+2025-11-14 11:37:47,724 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:37:47,727 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:48,222 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763091469199953146584529], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:37:48,223 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:48,975 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"created","id":2}
+2025-11-14 11:37:48,976 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 60008
+实际值: 0
+
+2025-11-14 11:37:48,983 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:49,453 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763091470356213134398698], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:37:49,454 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:51,029 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"field `id` expect type `uint32`. invalid Request Parameter, hint: [1763091471035893240829641], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 11:37:51,030 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 11:37:51,031 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:37:51,033 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:51,706 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763091472547532148178572], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:37:51,706 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:52,237 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60004,"errmsg":"parent department not found, hint: [1763091473617231819575683], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60004"}
+2025-11-14 11:37:52,238 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 60004
+2025-11-14 11:37:52,239 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:37:52,241 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:52,661 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763091473445412686310261], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:37:52,661 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:53,171 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763091474617231256783918], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:37:53,172 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 40058
+实际值: 60008
+
+2025-11-14 11:37:53,180 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:53,579 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763091474496741756660042], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:37:53,579 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:54,042 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763091475598872511328326], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:37:54,042 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 11:37:54,049 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:55,494 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763091476499300350650706], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:37:55,494 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:55,954 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763091477192270697724652], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:37:55,956 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 11:37:55,964 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:56,420 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","department_id":[{"id":2,"parentid":1,"order":9}]}
+2025-11-14 11:37:56,420 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 0
+2025-11-14 11:37:56,421 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:37:56,424 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:56,826 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60123,"errmsg":"invalid party id, hint: [1763091478611672164363797], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60123","department_id":[]}
+2025-11-14 11:37:56,827 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 60111
+实际值: 60123
+
+2025-11-14 11:37:56,838 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/update?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:57,325 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"updated"}
+2025-11-14 11:37:57,325 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 0
+2025-11-14 11:37:57,327 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:37:57,330 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/update?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:57,800 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60124,"errmsg":"invalid parent party id, hint: [1763091479345573733382842], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60124"}
+2025-11-14 11:37:57,800 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 60004
+实际值: 60124
+
+2025-11-14 11:37:57,809 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/update?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:37:58,188 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"name exceed min utf8 words 1. invalid Request Parameter, hint: [1763091479038290903658474], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 11:37:58,188 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 11:37:58,189 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:37:58,191 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/delete?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg&id=2
+2025-11-14 11:37:58,762 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"deleted"}
+2025-11-14 11:37:58,762 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 0
+2025-11-14 11:37:58,763 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:37:58,766 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/delete?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg&id=1
+2025-11-14 11:37:59,250 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60005,"errmsg":"department contains user, hint: [1763091480609113077919692], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60005"}
+2025-11-14 11:37:59,250 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 60005
+2025-11-14 11:37:59,251 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:37:59,253 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/delete?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg&id=99999
+2025-11-14 11:37:59,709 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60123,"errmsg":"invalid party id, hint: [1763091480022872123441323], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60123"}
+2025-11-14 11:37:59,709 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 60111
+实际值: 60123
+
+2025-11-14 11:40:25,944 - [INFO] - conftest.py:17 - 开始执行环境数据准备...
+2025-11-14 11:40:25,944 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-11-14 11:40:26,507 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg","expires_in":7200}
+2025-11-14 11:40:26,509 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:40:26,994 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","department_id":[{"id":1,"parentid":0,"order":100000000},{"id":16,"parentid":1,"order":16},{"id":3,"parentid":1,"order":99999000},{"id":4,"parentid":1,"order":99998000},{"id":6,"parentid":1,"order":99996000},{"id":7,"parentid":1,"order":99995000},{"id":8,"parentid":1,"order":99994000},{"id":18,"parentid":1,"order":14},{"id":17,"parentid":1,"order":15},{"id":11,"parentid":1,"order":99992000},{"id":13,"parentid":1,"order":19},{"id":19,"parentid":1,"order":13},{"id":20,"parentid":1,"order":20},{"id":22,"parentid":1,"order":10},{"id":21,"parentid":1,"order":11}]}
+2025-11-14 11:40:27,001 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:40:27,455 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763091628442851950649355], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:47:18,080 - [INFO] - conftest.py:17 - 开始执行环境数据准备...
+2025-11-14 11:47:18,080 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-11-14 11:47:18,576 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg","expires_in":7200}
+2025-11-14 11:47:18,586 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:20,093 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","department_id":[{"id":1,"parentid":0,"order":100000000},{"id":16,"parentid":1,"order":16},{"id":3,"parentid":1,"order":99999000},{"id":4,"parentid":1,"order":99998000},{"id":6,"parentid":1,"order":99996000},{"id":7,"parentid":1,"order":99995000},{"id":8,"parentid":1,"order":99994000},{"id":18,"parentid":1,"order":14},{"id":17,"parentid":1,"order":15},{"id":11,"parentid":1,"order":99992000},{"id":13,"parentid":1,"order":19},{"id":19,"parentid":1,"order":13},{"id":20,"parentid":1,"order":20},{"id":22,"parentid":1,"order":10},{"id":21,"parentid":1,"order":11}]}
+2025-11-14 11:47:20,102 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:20,646 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092041445410415600034], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:47:20,646 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:21,126 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092042197391412172804], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:47:21,128 - [INFO] - prepare_test_data.py:34 - ✅ 为 delete_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 11:47:21,128 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:21,525 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092042184591825267311], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:47:21,525 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:21,999 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092043197392867160672], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:47:22,002 - [INFO] - prepare_test_data.py:34 - ✅ 为 delete_department 预置部门: YAML写id=99999 实际id=None
+2025-11-14 11:47:22,003 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:22,429 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092043596311732727683], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:47:22,429 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:22,918 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092044499303718045727], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:47:22,921 - [INFO] - prepare_test_data.py:34 - ✅ 为 update_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 11:47:22,921 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:24,474 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092045351091958193006], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:47:24,475 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:25,110 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092046555213941870640], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:47:25,111 - [INFO] - prepare_test_data.py:34 - ✅ 为 update_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 11:47:25,111 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:25,527 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092046192273680595845], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:47:25,528 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:26,055 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092047496741793457182], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:47:26,056 - [INFO] - prepare_test_data.py:34 - ✅ 为 update_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 11:47:26,056 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:26,544 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092047016360145928834], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:47:26,544 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:27,057 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092048356211329459698], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:47:27,060 - [INFO] - prepare_test_data.py:34 - ✅ 为 get_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 11:47:27,060 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:27,529 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092048547531544229426], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:47:27,529 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:28,046 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092049351091588109046], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:47:28,047 - [INFO] - prepare_test_data.py:34 - ✅ 为 get_department 预置部门: YAML写id=99999 实际id=None
+2025-11-14 11:47:28,049 - [INFO] - prepare_test_data.py:92 - 跳过用户数据准备
+2025-11-14 11:47:28,049 - [INFO] - prepare_test_data.py:96 - 跳过标签数据准备
+2025-11-14 11:47:28,049 - [INFO] - prepare_test_data.py:97 - ========== 测试数据准备完成 ==========
+2025-11-14 11:47:28,049 - [INFO] - conftest.py:19 - 环境数据准备完成。
+2025-11-14 11:47:28,050 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-11-14 11:47:28,597 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg","expires_in":7200}
+2025-11-14 11:47:28,611 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:30,045 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092051611670271797155], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:47:30,045 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:31,578 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092052601432798123719], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:47:31,581 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 11:47:31,615 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:32,041 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092053593753152454343], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:47:32,041 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:32,560 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092053035893982647771], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:47:32,561 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 11:47:32,567 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:33,045 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092054550093586168123], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:47:33,046 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:33,525 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092054194170144620112], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:47:33,527 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 11:47:33,536 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:33,937 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092055609662177333707], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:47:33,937 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:34,444 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"name exceed min utf8 words 1. invalid Request Parameter, hint: [1763092055617340941651954], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 11:47:34,446 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 11:47:34,448 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:47:34,452 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:34,862 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092056442852491191217], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:47:34,863 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:35,321 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"name exceed max utf8 words 64. invalid Request Parameter, hint: [1763092056025432070322879], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 11:47:35,323 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 11:47:35,324 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:47:35,326 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:35,797 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092057494182970827689], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:47:35,797 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:36,357 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092057345572211830470], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:47:36,358 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 60008
+2025-11-14 11:47:36,359 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:47:36,361 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:36,761 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092058611672986208963], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:47:36,761 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:37,311 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"created","id":2}
+2025-11-14 11:47:37,312 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 60008
+实际值: 0
+
+2025-11-14 11:47:37,320 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:37,760 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092059035893263425787], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:47:37,760 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:38,228 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"field `id` expect type `uint32`. invalid Request Parameter, hint: [1763092059358770930116084], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 11:47:38,229 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 11:47:38,231 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:47:38,234 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:38,673 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092059496743433597479], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:47:38,674 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:39,109 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60004,"errmsg":"parent department not found, hint: [1763092060596313629151973], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60004"}
+2025-11-14 11:47:39,110 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 60004
+2025-11-14 11:47:39,112 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:47:39,114 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:39,563 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092060201854152480084], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:47:39,563 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:41,093 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092062501862520313354], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:47:41,094 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 40058
+实际值: 60008
+
+2025-11-14 11:47:41,101 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:41,577 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092062612223929093201], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:47:41,577 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:42,070 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092063598873225616117], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:47:42,072 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 11:47:42,077 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:42,459 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092063611670580664640], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:47:42,460 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:47:42,970 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092064022874050659061], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:47:42,972 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 11:51:00,450 - [INFO] - conftest.py:17 - 开始执行环境数据准备...
+2025-11-14 11:51:00,450 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-11-14 11:51:00,963 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg","expires_in":7200}
+2025-11-14 11:51:00,972 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:01,594 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","department_id":[{"id":1,"parentid":0,"order":100000000},{"id":16,"parentid":1,"order":16},{"id":3,"parentid":1,"order":99999000},{"id":4,"parentid":1,"order":99998000},{"id":6,"parentid":1,"order":99996000},{"id":7,"parentid":1,"order":99995000},{"id":8,"parentid":1,"order":99994000},{"id":18,"parentid":1,"order":14},{"id":17,"parentid":1,"order":15},{"id":11,"parentid":1,"order":99992000},{"id":13,"parentid":1,"order":19},{"id":19,"parentid":1,"order":13},{"id":20,"parentid":1,"order":20},{"id":22,"parentid":1,"order":10},{"id":21,"parentid":1,"order":11},{"id":2,"parentid":1,"order":9}]}
+2025-11-14 11:51:01,600 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:03,202 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092264437732400846670], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:51:03,202 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:06,921 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092268176911547690312], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:51:06,923 - [INFO] - prepare_test_data.py:34 - ✅ 为 delete_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 11:51:06,924 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:07,322 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092268489062988504934], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:51:07,322 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:07,894 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092269353653494128064], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:51:07,895 - [INFO] - prepare_test_data.py:34 - ✅ 为 delete_department 预置部门: YAML写id=99999 实际id=None
+2025-11-14 11:51:07,895 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:08,314 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092269199950027669056], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:51:08,314 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:08,811 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092270501860583188093], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:51:08,813 - [INFO] - prepare_test_data.py:34 - ✅ 为 update_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 11:51:08,814 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:09,296 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092270547530988381688], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:51:09,296 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:09,803 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092271489063606046801], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:51:09,807 - [INFO] - prepare_test_data.py:34 - ✅ 为 update_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 11:51:09,807 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:10,321 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092271199952806548244], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:51:10,321 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:10,860 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092272196730377259826], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:51:10,864 - [INFO] - prepare_test_data.py:34 - ✅ 为 update_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 11:51:10,864 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:11,245 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092272035892804060252], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:51:11,245 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:11,825 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092273035893108326099], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:51:11,828 - [INFO] - prepare_test_data.py:34 - ✅ 为 get_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 11:51:11,828 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:12,279 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092273601431677403928], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:51:12,279 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:12,805 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092274550092874248544], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:51:12,809 - [INFO] - prepare_test_data.py:34 - ✅ 为 get_department 预置部门: YAML写id=99999 实际id=None
+2025-11-14 11:51:12,811 - [INFO] - prepare_test_data.py:92 - 跳过用户数据准备
+2025-11-14 11:51:12,811 - [INFO] - prepare_test_data.py:96 - 跳过标签数据准备
+2025-11-14 11:51:12,811 - [INFO] - prepare_test_data.py:97 - ========== 测试数据准备完成 ==========
+2025-11-14 11:51:12,811 - [INFO] - conftest.py:19 - 环境数据准备完成。
+2025-11-14 11:51:12,811 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-11-14 11:51:13,263 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg","expires_in":7200}
+2025-11-14 11:51:13,279 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:13,745 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092275430050217313416], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:51:13,745 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:14,263 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092275204411565735565], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:51:14,265 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 11:51:14,302 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:14,695 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092276598872712657167], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:51:14,696 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:15,211 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092276016364069316093], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:51:15,213 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 11:51:15,224 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:15,729 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092277552652239878422], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:51:15,729 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:17,297 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092278614783193106547], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:51:17,299 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 11:51:17,310 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:17,779 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092279196732725557121], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:51:17,779 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:18,539 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"name exceed min utf8 words 1. invalid Request Parameter, hint: [1763092279201850705351667], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 11:51:18,541 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 11:51:18,543 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:51:18,548 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:18,929 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092280445411750974008], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:51:18,929 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:20,655 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"name exceed max utf8 words 64. invalid Request Parameter, hint: [1763092281430053885177938], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 11:51:20,656 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 11:51:20,657 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:51:20,659 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:21,077 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092282378851673175113], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:51:21,077 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:21,585 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092282196731932103829], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:51:21,586 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 60008
+2025-11-14 11:51:21,586 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:51:21,589 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:22,103 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092283486500717492419], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:51:22,103 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:22,694 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092283489061913722405], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:51:22,695 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 60008
+2025-11-14 11:51:22,696 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:51:22,698 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:23,160 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092284609660962684582], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:51:23,161 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:23,658 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"field `id` expect type `uint32`. invalid Request Parameter, hint: [1763092284353652869222281], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 11:51:23,660 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 11:51:23,662 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:51:23,666 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:24,127 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092285353650508221777], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:51:24,127 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:24,526 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60004,"errmsg":"parent department not found, hint: [1763092285351092639725506], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60004"}
+2025-11-14 11:51:24,535 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 60004
+2025-11-14 11:51:24,536 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:51:24,539 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:25,012 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092286499301766132950], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:51:25,012 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:25,525 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092286598872136530857], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:51:25,526 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 40058
+实际值: 60008
+
+2025-11-14 11:51:25,532 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:25,977 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092287560331575315366], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:51:25,977 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:26,479 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092287182030624284619], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:51:26,480 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 11:51:26,487 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:26,995 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092288552653914997568], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:51:26,996 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:51:27,509 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092288547533415069345], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:51:27,511 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 11:56:11,328 - [INFO] - conftest.py:17 - 开始执行环境数据准备...
+2025-11-14 11:56:11,328 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-11-14 11:56:11,950 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg","expires_in":7200}
+2025-11-14 11:56:11,952 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:12,460 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","department_id":[{"id":1,"parentid":0,"order":100000000},{"id":16,"parentid":1,"order":16},{"id":3,"parentid":1,"order":99999000},{"id":4,"parentid":1,"order":99998000},{"id":6,"parentid":1,"order":99996000},{"id":7,"parentid":1,"order":99995000},{"id":8,"parentid":1,"order":99994000},{"id":18,"parentid":1,"order":14},{"id":17,"parentid":1,"order":15},{"id":11,"parentid":1,"order":99992000},{"id":13,"parentid":1,"order":19},{"id":19,"parentid":1,"order":13},{"id":20,"parentid":1,"order":20},{"id":22,"parentid":1,"order":10},{"id":21,"parentid":1,"order":11},{"id":2,"parentid":1,"order":9}]}
+2025-11-14 11:56:12,468 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:12,841 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092574358771027530092], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:56:12,842 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:15,538 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092576609111439126647], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:56:15,540 - [INFO] - prepare_test_data.py:34 - ✅ 为 delete_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 11:56:15,540 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:15,970 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092577353651400479503], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:56:15,970 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:16,467 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092577555213388839599], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:56:16,472 - [INFO] - prepare_test_data.py:34 - ✅ 为 delete_department 预置部门: YAML写id=99999 实际id=None
+2025-11-14 11:56:16,472 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:16,904 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092578427491868738421], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:56:16,905 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:17,416 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092578443031881487378], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:56:17,420 - [INFO] - prepare_test_data.py:34 - ✅ 为 update_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 11:56:17,420 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:17,872 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092579182030418956144], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:56:17,872 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:18,386 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092579201851238558074], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:56:18,388 - [INFO] - prepare_test_data.py:34 - ✅ 为 update_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 11:56:18,388 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:18,827 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092580358773705930760], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:56:18,827 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:19,293 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092580437732736975307], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:56:19,295 - [INFO] - prepare_test_data.py:34 - ✅ 为 update_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 11:56:19,295 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:19,710 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092581617343345574888], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:56:19,710 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:20,377 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092581555214289956175], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:56:20,380 - [INFO] - prepare_test_data.py:34 - ✅ 为 get_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 11:56:20,380 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:21,802 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092583617232669894651], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:56:21,802 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:22,265 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092583430050344547680], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:56:22,268 - [INFO] - prepare_test_data.py:34 - ✅ 为 get_department 预置部门: YAML写id=99999 实际id=None
+2025-11-14 11:56:22,271 - [INFO] - prepare_test_data.py:92 - 跳过用户数据准备
+2025-11-14 11:56:22,271 - [INFO] - prepare_test_data.py:96 - 跳过标签数据准备
+2025-11-14 11:56:22,271 - [INFO] - prepare_test_data.py:97 - ========== 测试数据准备完成 ==========
+2025-11-14 11:56:22,271 - [INFO] - conftest.py:19 - 环境数据准备完成。
+2025-11-14 11:56:22,271 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-11-14 11:56:22,779 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg","expires_in":7200}
+2025-11-14 11:56:22,788 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:24,243 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092585606552603994455], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:56:24,243 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:24,773 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092586201851470980511], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:56:24,776 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 11:56:24,816 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:25,284 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092586496743061570608], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:56:25,284 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:25,777 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092587445413553788457], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:56:25,778 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 11:56:25,787 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:26,258 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092587194834096638537], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:56:26,258 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:26,763 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092587445413892378233], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:56:26,765 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 11:56:26,776 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:27,228 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092588499304154019035], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:56:27,228 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:27,756 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"name exceed min utf8 words 1. invalid Request Parameter, hint: [1763092589560333882562013], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 11:56:27,758 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 11:56:27,759 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:56:27,762 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:28,228 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092589609663234963524], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:56:28,228 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:28,679 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"name exceed max utf8 words 64. invalid Request Parameter, hint: [1763092589598873162343962], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 11:56:28,680 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 11:56:28,681 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:56:28,683 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:29,178 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092590197392750478771], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:56:29,178 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:29,678 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092590606550859674596], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:56:29,680 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 60008
+2025-11-14 11:56:29,683 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:56:29,686 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:30,080 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092591184590422717766], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:56:30,081 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:30,494 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092591598870459742816], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:56:30,496 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 60008
+2025-11-14 11:56:30,498 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:56:30,501 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:30,900 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092592335140641649066], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:56:30,901 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:31,326 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"field `id` expect type `uint32`. invalid Request Parameter, hint: [1763092592609110075118271], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 11:56:31,327 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 11:56:31,328 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:56:31,331 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:31,863 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092593196731145818745], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:56:31,863 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:32,323 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60004,"errmsg":"parent department not found, hint: [1763092593356212579925117], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60004"}
+2025-11-14 11:56:32,325 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 60004
+2025-11-14 11:56:32,327 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 11:56:32,331 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:32,762 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092594345570910009185], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:56:32,763 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:33,291 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092594025431936473039], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:56:33,293 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 40058
+实际值: 60008
+
+2025-11-14 11:56:33,301 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:33,804 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092595489060303574332], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:56:33,804 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:34,278 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092595560331417723780], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:56:34,279 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 11:56:34,287 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:34,654 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":48009,"errmsg":"api forbidden for contact assistant, hint: [1763092595494183597355262], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=48009","department":[]}
+2025-11-14 11:56:34,654 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 11:56:35,179 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092596443033971366226], from ip: 218.24.198.29, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 11:56:35,181 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 0
+实际值: 60008
+
+2025-11-14 12:00:44,485 - [INFO] - conftest.py:17 - 开始执行环境数据准备...
+2025-11-14 12:00:44,485 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-11-14 12:00:45,077 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg","expires_in":7200}
+2025-11-14 12:00:45,079 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 12:00:45,680 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","department_id":[{"id":1,"parentid":0,"order":100000000},{"id":16,"parentid":1,"order":16},{"id":3,"parentid":1,"order":99999000},{"id":4,"parentid":1,"order":99998000},{"id":6,"parentid":1,"order":99996000},{"id":7,"parentid":1,"order":99995000},{"id":8,"parentid":1,"order":99994000},{"id":18,"parentid":1,"order":14},{"id":17,"parentid":1,"order":15},{"id":11,"parentid":1,"order":99992000},{"id":13,"parentid":1,"order":19},{"id":19,"parentid":1,"order":13},{"id":20,"parentid":1,"order":20},{"id":22,"parentid":1,"order":10},{"id":21,"parentid":1,"order":11},{"id":2,"parentid":1,"order":9}]}
+2025-11-14 12:00:45,686 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 12:00:46,488 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092847603990760003410], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 12:00:46,489 - [INFO] - prepare_test_data.py:34 - ✅ 为 delete_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 12:00:46,489 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 12:00:47,129 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092848609660346574301], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 12:00:47,132 - [INFO] - prepare_test_data.py:34 - ✅ 为 delete_department 预置部门: YAML写id=99999 实际id=None
+2025-11-14 12:00:47,133 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 12:00:47,796 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092849176912539548525], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 12:00:47,798 - [INFO] - prepare_test_data.py:34 - ✅ 为 update_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 12:00:47,798 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 12:00:48,455 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092849442851260249113], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 12:00:48,456 - [INFO] - prepare_test_data.py:34 - ✅ 为 update_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 12:00:48,456 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 12:00:48,912 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092850499301662070046], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 12:00:48,914 - [INFO] - prepare_test_data.py:34 - ✅ 为 update_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 12:00:48,915 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 12:00:49,479 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092850204412953831742], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 12:00:49,480 - [INFO] - prepare_test_data.py:34 - ✅ 为 get_department 预置部门: YAML写id=2 实际id=None
+2025-11-14 12:00:49,480 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 12:00:50,009 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092851437733500496741], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 12:00:50,010 - [INFO] - prepare_test_data.py:34 - ✅ 为 get_department 预置部门: YAML写id=99999 实际id=None
+2025-11-14 12:00:50,013 - [INFO] - prepare_test_data.py:92 - 跳过用户数据准备
+2025-11-14 12:00:50,013 - [INFO] - prepare_test_data.py:96 - 跳过标签数据准备
+2025-11-14 12:00:50,014 - [INFO] - prepare_test_data.py:97 - ========== 测试数据准备完成 ==========
+2025-11-14 12:00:50,014 - [INFO] - conftest.py:19 - 环境数据准备完成。
+2025-11-14 12:00:50,014 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww779187ee7c9f7085&corpsecret=AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+2025-11-14 12:00:50,541 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":0,"errmsg":"ok","access_token":"pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg","expires_in":7200}
+2025-11-14 12:00:50,549 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 12:00:51,075 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092852427492462725758], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 12:00:51,077 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 0
+2025-11-14 12:00:51,079 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 12:00:51,083 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 12:00:51,752 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092853442853430477400], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 12:00:51,752 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 0
+2025-11-14 12:00:51,754 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 12:00:51,757 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 12:00:52,345 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092853501861583653511], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 12:00:52,345 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 0
+2025-11-14 12:00:52,346 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 12:00:52,349 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 12:00:52,979 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"name exceed min utf8 words 1. invalid Request Parameter, hint: [1763092854612223061139115], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 12:00:52,979 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 12:00:52,981 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 12:00:52,984 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 12:00:53,493 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"name exceed max utf8 words 64. invalid Request Parameter, hint: [1763092854557770620931795], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 12:00:53,493 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 12:00:53,495 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 12:00:53,497 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 12:00:54,057 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092855501860980993174], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 12:00:54,058 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 60008
+实际值: 0
+
+2025-11-14 12:00:54,094 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 12:00:54,594 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092855550092294046370], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 12:00:54,594 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 60008
+实际值: 0
+
+2025-11-14 12:00:54,604 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 12:00:55,054 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":40058,"errmsg":"field `id` expect type `uint32`. invalid Request Parameter, hint: [1763092856552650737363608], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=40058"}
+2025-11-14 12:00:55,054 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 40058
+2025-11-14 12:00:55,056 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 12:00:55,060 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 12:00:55,508 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60004,"errmsg":"parent department not found, hint: [1763092856437730091167320], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60004"}
+2025-11-14 12:00:55,509 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 60004
+2025-11-14 12:00:55,509 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 12:00:55,512 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 12:00:56,071 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092857555212477026022], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 12:00:56,071 - [ERROR] - assertions.py:31 - 
+❌ JSONPath 断言失败：$.errcode
+期望值: 40058
+实际值: 0
+
+2025-11-14 12:00:56,078 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 12:00:56,560 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092857025431857366467], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 12:00:56,561 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 0
+2025-11-14 12:00:56,562 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
+2025-11-14 12:00:56,564 - [INFO] - base_api.py:17 - 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token=pzVXOW2FtM-3sxMnjVcMMvniuCmloDhjaaRha2irTo9FFTjhGntEJzOxJjXJu_hPXHrNzFUK9CUeuBZ3Ohl1PjbfX6ExhLETKoF1fe8IlLq7eUyGRq8R-pdEJNMTTtw78vEIeNQu63np9fa14eaRJP5OiCxTYKk3VQgn94-CtCWuwCp8yqVVPVT9NlplaEWEXTUjI1XdwQz6Kz7A09xOBg
+2025-11-14 12:00:57,095 - [INFO] - base_api.py:19 - 接口响应为：{"errcode":60008,"errmsg":"department existed, hint: [1763092858204411952063343], from ip: 218.24.198.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60008"}
+2025-11-14 12:00:57,095 - [INFO] - assertions.py:29 - ✅ JSONPath 断言成功：$.errcode = 0
+2025-11-14 12:00:57,096 - [INFO] - schema.py:24 - ✅ JSON Schema 校验通过
