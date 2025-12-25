@@ -107,6 +107,10 @@ allure open ./allure-report
 
 ##  Allure 报告示例
 
+### 测试概览
+！[Allure Overview](images/allure_overview.png)
+### 用例执行情况
+！[Testcases](images/allure_testcases.png)
 
 ---
 
