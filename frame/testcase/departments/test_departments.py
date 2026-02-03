@@ -14,7 +14,7 @@ class TestDepartments:
 
     @allure.story("创建部门")
     @pytest.mark.parametrize("case", load_yaml("datas/departments.yaml")["create_department"])
-    def test_create_department(self, department_api,case):
+    def test_create_department(self, db,department_api,case):
         allure.dynamic.title(case["name"])
         res = department_api.create(case["data"])
         res_json = res.json()
@@ -23,6 +23,8 @@ class TestDepartments:
         if res_json.get("errcode") == 0:
             dep_id = res_json.get("id")
             if dep_id:
+                db.execute("INSERT INTO dept_mock (dept_id, dept_name) VALUES (%s, %s)",
+                (dep_id, case["name"]))
                 CREATED_DEPT_IDS.append(dep_id)
                 log.info(f"✅ 创建测试部门ID：{dep_id}")
             else:
@@ -37,38 +39,52 @@ class TestDepartments:
         schema_path = os.path.join(os.path.dirname(__file__), "../../schema/department_schema.json")
         SchemaValidator.validate_json(res.json(), schema_path)
         #数据库断言
-        # sql = f"SELECT name FROM departments WHERE id = {fake_department}"
-        # AssertUtil.assert_db_value(db, sql, case["data"]["name"], key="name")
+        result=db.query("select dept_name from dept_mock where dept_id=%s", (dep_id,))
+        assert result[0]["dept_name"] == case["name"]
 
 
     @allure.story("查询部门")
     @pytest.mark.parametrize("case", load_yaml("datas/departments.yaml")["get_department"])
-    def test_get_department(self, department_api, case):
+    def test_get_department(self, department_api, db,case):
         allure.dynamic.title(case["name"])
-
+        #准备模拟数据
+        db.execute("INSERT INTO dept_mock (dept_id, dept_name) VALUES (%s, %s)",(case["data"]["id"],case["data"]["name"]))
+        #res = department_api.get_department(case["data"])
         res = department_api.get(params=case["data"])
         assert res.status_code == 200
+
         AssertUtil.assert_json_value(res.json(), "$.errcode", case["expect"]["errcode"])
         # jsonschema结构断言
         schema_path = os.path.join(os.path.dirname(__file__), "../../schema/department_schema.json")
         SchemaValidator.validate_json(res.json(), schema_path)
         #数据库断言
-
-
+        result=db.query_all("SELECT dept_name FROM dept_mock WHERE dept_id=%s",(case["data"]["id"],))
+        assert result[0]["dept_name"] == case["data"]["name"]
 
     @allure.story("更新部门")
     @pytest.mark.parametrize("case", load_yaml("datas/departments.yaml")["update_department"])
-    def test_update_department(self, department_api, case):
+    def test_update_department(self, department_api,db, case):
         allure.dynamic.title(case["name"])
         # 修改临时部门名
         data=case["data"]
+        #准备旧数据
+        db.execute("INSERT INTO dept_mock (dept_id, dept_name) VALUES (%s, %s)",(case["data"]["id"],"旧部门"))
         res = department_api.update(data)
         assert res.status_code == 200
+        #模拟业务更新
+        db.execute(
+            "UPDATE dept_mock SET dept_name=%s WHERE dept_id=%s",
+            (case["data"]["name"], case["data"]["id"])
+        )
         AssertUtil.assert_json_value(res.json(), "$.errcode", case["expect"]["errcode"])
         # jsonschema结构断言
         schema_path = os.path.join(os.path.dirname(__file__), "../../schema/department_schema.json")
         SchemaValidator.validate_json(res.json(), schema_path)
-
+        #数据库断言
+        result = db.query(
+            "SELECT dept_name FROM dept_mock WHERE dept_id=%s",
+            (case["data"]["id"],)
+        )
     # @allure.story("删除部门")
     # @pytest.mark.parametrize("case", load_yaml("datas/departments.yaml")["delete_department"])
     # def test_delete_department(self, department_api, case, temp_department):
@@ -78,10 +94,14 @@ class TestDepartments:
     #     res = department_api.delete(case["params"])
     @allure.story("删除部门")
     @pytest.mark.parametrize("case", load_yaml("datas/departments.yaml")["delete_department"])#让fixture接受参数
-    def test_delete_department(self, department_api, case):
+    def test_delete_department(self, department_api, db,case):
         """测试删除部门接口，使用纯数据驱动，不依赖fixture"""
         allure.dynamic.title(case["name"])
         dep_id = case["data"]["id"]
+        db.execute(
+            "INSERT INTO dept_mock (dept_id, dept_name) VALUES (%s, %s)",
+            (dep_id, case["data"]["name"])
+        )
         # 发起删除请求
         res = department_api.delete(dep_id)
         # 校验接口状态码
@@ -91,3 +111,8 @@ class TestDepartments:
         # jsonschema结构断言
         schema_path = os.path.join(os.path.dirname(__file__), "../../schema/department_schema.json")
         SchemaValidator.validate_json(res.json(), schema_path)
+        #数据库断言
+        result = db.query(
+            "SELECT dept_name FROM dept_mock WHERE dept_id=%s",
+            (dep_id,)
+        )

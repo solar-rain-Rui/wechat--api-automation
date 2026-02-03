@@ -16,13 +16,13 @@ class DBUtil:
         self.cursor = self.conn.cursor()
         log.info("✅ DB connected")
 
-    def query(self, sql, params=None):
+    def query_all(self, sql, params=None):
         """执行查询，返回所有结果（列表 of dict）"""
         log.info(f"执行查询: {sql} | params: {params}")
         self.cursor.execute(sql, params)
         return self.cursor.fetchall()
 
-    def fetch_one(self, sql, params=None):
+    def query_one(self, sql, params=None):
         """执行查询，返回单条记录（dict 或 None）"""
         log.info(f"执行查询(fetch_one): {sql} | params: {params}")
         self.cursor.execute(sql, params)
