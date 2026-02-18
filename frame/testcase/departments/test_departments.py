@@ -85,13 +85,7 @@ class TestDepartments:
             "SELECT dept_name FROM dept_mock WHERE dept_id=%s",
             (case["data"]["id"],)
         )
-    # @allure.story("删除部门")
-    # @pytest.mark.parametrize("case", load_yaml("datas/departments.yaml")["delete_department"])
-    # def test_delete_department(self, department_api, case, temp_department):
-    #     allure.dynamic.title(case["name"])
-    #     # 删除 fixture 创建的临时部门
-    #     case["params"]["id"] = temp_department
-    #     res = department_api.delete(case["params"])
+
     @allure.story("删除部门")
     @pytest.mark.parametrize("case", load_yaml("datas/departments.yaml")["delete_department"])#让fixture接受参数
     def test_delete_department(self, department_api, db,case):

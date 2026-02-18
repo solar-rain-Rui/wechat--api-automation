@@ -1,13 +1,15 @@
 # frame/testcases/conftest.py
 import pytest
 
+from frame.apis.base_api import BaseApi
 from frame.apis.contacts.departments import Departments
 from frame.apis.contacts.tags import Tags
 from frame.apis.contacts.users import Users
+from frame.common.config import cf
 from frame.common.db import DBUtil
 from frame.common.tools import load_yaml, CREATED_DEPT_IDS, CREATED_USER_IDS
 from frame.common.logger import log
-from frame.apis.wework import WeWork  # 全局入口
+
 
 from frame.setup.prepare_test_data import prepare_all_test_data
 
@@ -31,8 +33,17 @@ def cfg():
 @pytest.fixture(scope="session")
 def token():
     """获取全局 token，只执行一次"""
-    wk = WeWork()
-    return wk.token
+    base_url = cf.get("base_url")
+    corpid = cf.get("corpid")["接口自动化测试"]
+    corpsecret = cf.get("corpsecret")["contacts"]
+    url = f"{base_url}/gettoken?corpid={corpid}&corpsecret={corpsecret}"
+    api = BaseApi() #创建(统一请求接口)对象
+    req = {
+        "method": "GET",
+        "url": url
+    }
+    r = api.send_api(req)
+    return r.json()["access_token"]
 
 @pytest.fixture(scope="session")
 def db():
@@ -45,12 +56,21 @@ def db():
     )
     yield db
     db.close()
-
+#统一管理业务接口对象的fixture
 @pytest.fixture(scope="session")
-def department_api(token):
+def department_api(token): #获取的token传进来
     """部门模块的 API 实例"""
     return Departments(token=token)
 
+@pytest.fixture(scope="session")
+def user_api(token):
+    """提供用户模块接口实例"""
+    return Users(token=token)
+
+@pytest.fixture(scope="session")
+def tag_api(token):
+    """提供标签接口实例"""
+    return Tags(token=token)
 
 @pytest.fixture(scope="session", autouse=True)
 def clean_created_data():

@@ -1,10 +1,11 @@
+from frame.apis.base_api import BaseApi
+
 print(">>> LOADING Tags CLASS FROM:", __file__)
 
 import allure
-from frame.apis.wework import WeWork
 from frame.common.logger import log
 
-class Tags(WeWork):
+class Tags(BaseApi):
     @allure.step("创建标签")
     def create(self, tagname, tagid=None):
         data = {"tagname": tagname}

@@ -1,10 +1,7 @@
 import pytest
 from frame.apis.contacts.tags import Tags
 
-@pytest.fixture(scope="function")
-def tag_api():
-    """提供标签接口实例"""
-    return Tags()
+
 
 @pytest.fixture(scope="function")
 def temp_tag(tag_api):

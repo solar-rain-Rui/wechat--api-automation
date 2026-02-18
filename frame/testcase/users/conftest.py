@@ -5,11 +5,6 @@ import pytest
 import time
 from frame.apis.contacts.users import Users
 
-@pytest.fixture(scope="session")
-def user_api(token):
-    """提供用户模块接口实例"""
-    return Users(token=token)
-
 
 
 @pytest.fixture(scope="function")

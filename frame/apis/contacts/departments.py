@@ -1,12 +1,13 @@
 from jsonpath import jsonpath
 
-from frame.apis.wework import WeWork
+from frame.apis.base_api import BaseApi
+
 import requests
 from frame.common.logger import log
 from frame.common.db import DBUtil
 
 
-class Departments(WeWork):
+class Departments(BaseApi):
     """
     业务接口信息的具体描述，只关注接口本身，不需要设计业务和断言
     可以在每个接口对应方法中返回接口的响应
@@ -19,7 +20,7 @@ class Departments(WeWork):
         # 先执行清理
         #self.clean_before_create(data)
         #create_url = f"https://qyapi.weixin.qq.com/cgi-bin/department/create?access_token={self.token}"#token?
-        create_url = f"{self.base_url}/department/create?access_token={self.token}"#token?
+        create_url = f"{self.base_url}/department/create"
 
         req={
             "method": "POST",

@@ -1,8 +1,8 @@
 # frame/api/users.py
-from frame.apis.wework import WeWork
+from frame.apis.base_api import BaseApi
 
 
-class Users(WeWork):
+class Users(BaseApi):
     """成员管理模块"""
 
     def create(self, data):
