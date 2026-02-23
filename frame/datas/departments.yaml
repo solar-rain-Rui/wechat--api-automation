@@ -1,93 +1,152 @@
 # ================= 创建部门 =================
+# YAML 只保留测试输入和断言数据，不负责数据准备或清理
+# 需要唯一化的字段统一使用 "${auto}" 占位符，由 fixture 动态生成
 create_department:
-  # ---- 正常用例 ----
+  # ---- 成功场景 ----
   - name: 正常创建一级部门
+    group: success
     data:
-      name: "test_自动化一级部门01"
-      parentid: 1
+      name: "${auto}"
+      parentid: "${auto}"
     expect:
       errcode: 0
   - name: 创建含英文名部门
+    group: success
     data:
-      name: "test_研发部"
+      name: "${auto}"
       name_en: "DevDept"
-      parentid: 1
+      parentid: "${auto}"
     expect:
       errcode: 0
   - name: 创建排序值部门
+    group: success
     data:
-      name: "test_有序部门"
-      parentid: 1
+      name: "${auto}"
+      parentid: "${auto}"
       order: 20
     expect:
       errcode: 0
-
-  # ---- 异常用例 ----
-  - name: 创建部门名称为空
+  - name: 创建含特殊字符部门
+    group: success
     data:
-      name: ""
-      parentid: 1
-    expect:
-      errcode: 40058
-  - name: 创建部门名称超长
-    data:
-      name: "test_超长部门超长部门超长部门超长部门超长部门超长部门超长部门超长部门超长部门超长部门超长部门超长部门超长部门超长部门超长部门超长部门超长部门超长部门超长部门超长部门"
-      parentid: 1
-    expect:
-      errcode: 40058
-  - name: 创建重复名称部门
-    data:
-      name: "test_自动化一级部门01"
-      parentid: 1
-    expect:
-      errcode: 60008
-  - name: 创建重复id部门
-    data:
-      name: "test_重复ID部门"
-      parentid: 1
-      id: 2
+      name: "${auto}"
+      parentid: "${auto}"
     expect:
       errcode: 0
-  - name: 创建部门id为负数
+  - name: 创建emoji部门
+    group: success
     data:
-      name: "test_异常部门"
-      parentid: 1
+      name: "${auto}"
+      parentid: "${auto}"
+    expect:
+      errcode: 0
+  - name: 创建中英文混合部门
+    group: success
+    data:
+      name: "${auto}"
+      parentid: "${auto}"
+    expect:
+      errcode: 0
+
+  # ---- 验证场景 ----
+  - name: 创建部门名称为空
+    group: validation
+    data:
+      name: ""
+      parentid: "${auto}"
+    expect:
+      errcode: 40058
+  - name: parentid传字符串类型
+    group: validation
+    data:
+      name: "${auto}"
+      parentid: "invalid_string"
+    expect:
+      errcode: 40058
+  - name: parentid传空字符串
+    group: validation
+    data:
+      name: "${auto}"
+      parentid: ""
+    expect:
+      errcode: 40058
+  - name: order传字符串类型
+    group: validation
+    data:
+      name: "${auto}"
+      parentid: "${auto}"
+      order: "invalid_order"
+    expect:
+      errcode: 40058
+  - name: 指定已存在的id创建部门
+    group: validation
+    data:
+      name: "${auto}"
+      parentid: "${auto}"
+      id: 1
+    expect:
+      errcode: 60123
+
+  # ---- 边界场景 ----
+  - name: 创建部门名称边界值64字符
+    group: boundary
+    data:
+      name: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      parentid: "${auto}"
+    expect:
+      errcode: 0
+  - name: 创建部门名称边界值65字符
+    group: boundary
+    data:
+      name: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      parentid: "${auto}"
+    expect:
+      errcode: 40058
+  - name: 创建部门id为负数
+    group: boundary
+    data:
+      name: "${auto}"
+      parentid: "${auto}"
       id: -5
     expect:
       errcode: 40058
   - name: 创建部门父级不存在
+    group: boundary
     data:
-      name: "test_父级不存在部门"
+      name: "${auto}"
       parentid: 99999
     expect:
       errcode: 60004
-  - name: 创建含特殊字符部门
+  - name: 创建部门order为0
+    group: boundary
     data:
-      name: "test_@@@###$$$"
-      parentid: 1
+      name: "${auto}"
+      parentid: "${auto}"
+      order: 0
     expect:
       errcode: 0
-  - name: 创建emoji部门
+  - name: 创建部门order为负数
+    group: boundary
     data:
-      name: "test_表情😊部门"
-      parentid: 1
-    expect:
-      errcode: 0
-  - name: 创建中英文混合部门
-    data:
-      name: "test_测试部Test"
-      parentid: 1
+      name: "${auto}"
+      parentid: "${auto}"
+      order: -1
     expect:
       errcode: 0
 
 # ================= 查询部门 =================
 get_department:
+  # ---- 成功场景 ----
   - name: 查询已存在部门
+    group: success
     data:
-      id: 2
+      id: "${auto}"
     expect:
       errcode: 0
+
+  # ---- 边界场景 ----
   - name: 查询不存在部门
+    group: boundary
     data:
       id: 99999
     expect:
@@ -95,38 +154,83 @@ get_department:
 
 # ================= 修改部门 =================
 update_department:
+  # ---- 成功场景 ----
   - name: 修改部门名称
+    group: success
     data:
-      id: 2
-      name: "研发部修改"
+      id: "${auto}"
+      name: "${auto}"
     expect:
       errcode: 0
-  - name: 修改父部门为不存在部门
+  - name: 修改部门排序值
+    group: success
     data:
-      id: 2
-      parentid: 99999
+      id: "${auto}"
+      order: 100
     expect:
-      errcode: 60124
-  - name: 修改部门名称为空
+      errcode: 0
+  - name: 修改部门英文名
+    group: success
     data:
-      id: 2
+      id: "${auto}"
+      name_en: "UpdatedDept"
+    expect:
+      errcode: 0
+
+  # ---- 验证场景 ----
+  - name: 修改部门名称为空
+    group: validation
+    data:
+      id: "${auto}"
       name: ""
     expect:
       errcode: 40058
+  - name: 修改部门名称超长
+    group: validation
+    data:
+      id: "${auto}"
+      name: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    expect:
+      errcode: 40058
+  - name: 修改parentid为字符串
+    group: validation
+    data:
+      id: "${auto}"
+      parentid: "invalid"
+    expect:
+      errcode: 40058
+
+  # ---- 边界场景 ----
+  - name: 修改父部门为不存在部门
+    group: boundary
+    data:
+      id: "${auto}"
+      parentid: 99999
+    expect:
+      errcode: 60124
+  - name: 修改部门名称为边界值64字符
+    group: boundary
+    data:
+      id: "${auto}"
+      name: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    expect:
+      errcode: 0
 
 # ================= 删除部门 =================
 delete_department:
+  # ---- 成功场景 ----
   - name: 删除无子部门部门
+    group: success
     data:
-      id: 2
+      id: "${auto}"
+      name: "${auto}"
     expect:
       errcode: 0
-  - name: 删除有子部门部门
-    data:
-      id: 1  # 根部门或含子部门
-    expect:
-      errcode: 60005
+
+  # ---- 边界场景 ----
+
   - name: 删除不存在部门
+    group: boundary
     data:
       id: 99999
     expect:

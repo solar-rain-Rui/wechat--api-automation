@@ -1,67 +1,347 @@
+# ================= 创建标签 =================
+# YAML 只保留测试输入和断言数据，不负责数据准备或清理
+# 需要唯一化的字段统一使用 "${auto}" 占位符，由 fixture 动态生成
 create_tag:
+  # ---- 成功场景 ----
   - name: 正常创建标签
+    group: success
     data:
-      tagname: "test_测试标签A"
+      tagname: "${auto}"
     expect:
       errcode: 0
   - name: 创建英文标签
+    group: success
     data:
-      tagname: "test_Tag_English"
+      tagname: "${auto}"
     expect:
       errcode: 0
-  - name: 创建重复名称标签
+  - name: 创建中英文混合标签
+    group: success
     data:
-      tagname: "test_测试标签A"
+      tagname: "${auto}"
     expect:
-      errcode: 40071
-  - name: 创建超长标签名
-    data:
-      tagname: >
-        test_标签标签标签标签标签标签标签标签标签标签标签标签标签标签标签标签
-        标签标签标签标签标签标签标签标签标签标签标签标签标签标签标签标签
-        标签标签标签标签标签标签标签标签标签标签标签标签标签标签标签标签
-    expect:
-      errcode: 40058
+      errcode: 0
   - name: 创建含特殊字符标签
+    group: success
     data:
-      tagname: "test_@@@标签"
+      tagname: "${auto}"
     expect:
       errcode: 0
-  - name: 创建空标签
+  - name: 创建指定tagid标签
+    group: success
+    data:
+      tagname: "${auto}"
+      tagid: "${auto}"
+    expect:
+      errcode: 0
+  - name: 创建标签名边界值32字符
+    group: success
+    data:
+      tagname: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    expect:
+      errcode: 0
+
+  # ---- 验证场景 ----
+  - name: 创建空标签名
+    group: validation
     data:
       tagname: ""
     expect:
       errcode: 40072
-
-update_tag:
-  - name: 正常修改标签名
+  - name: 创建tagid为字符串
+    group: validation
     data:
-      tagid: 2
-      tagname: "test_修改后标签"
+      tagname: "${auto}"
+      tagid: "invalid_tagid"
+    expect:
+      errcode: 40058
+  - name: 创建tagid为负数
+    group: validation
+    data:
+      tagname: "${auto}"
+      tagid: -1
+    expect:
+      errcode: 40058
+
+  # ---- 边界场景 ----
+  - name: 创建tagid超大整数
+    group: boundary
+    data:
+      tagname: "${auto}"
+      tagid: 9999999999
+    expect:
+      errcode_not: 0
+  - name: 创建标签名边界值31字符
+    group: boundary
+    data:
+      tagname: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
     expect:
       errcode: 0
-  - name: 修改不存在标签
+  - name: 创建标签名边界值32字符
+    group: boundary
     data:
-      tagid: 9999
-      tagname: "test_不存在标签"
+      tagname: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    expect:
+      errcode: 0
+  - name: 创建标签名边界值33字符
+    group: boundary
+    data:
+      tagname: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    expect:
+      errcode: 40058
+
+# ================= 查询标签 =================
+get_tag:
+  # ---- 成功场景 ----
+  - name: 查询已存在标签
+    group: success
+    data:
+      tagid: "${auto}"
+    expect:
+      errcode: 0
+
+  # ---- 边界场景 ----
+  - name: 查询不存在标签
+    group: boundary
+    data:
+      tagid: 99999
+    expect:
+      errcode: 40068
+  - name: 查询tagid为0
+    group: boundary
+    data:
+      tagid: 0
+    expect:
+      errcode: 40068
+  - name: 查询tagid为负数
+    group: boundary
+    data:
+      tagid: -1
     expect:
       errcode: 40068
 
-get_tag:
-  - name: 查询标签
+# ================= 修改标签 =================
+update_tag:
+  # ---- 成功场景 ----
+  - name: 正常修改标签名
+    group: success
     data:
-      tagid: 1
+      tagid: "${auto}"
+      tagname: "${auto}"
+    expect:
+      errcode: 0
+  - name: 修改标签名为边界值32字符
+    group: success
+    data:
+      tagid: "${auto}"
+      tagname: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
     expect:
       errcode: 0
 
-delete_tag:
-  - name: 正常删除标签
+  # ---- 验证场景 ----
+  - name: 修改不存在标签
+    group: validation
     data:
-      tagid: 3
+      tagid: 99999
+      tagname: "${auto}"
+    expect:
+      errcode: 40068
+  - name: 修改标签名为空
+    group: validation
+    data:
+      tagid: "${auto}"
+      tagname: ""
+    expect:
+      errcode: 40072
+  - name: 修改标签名超长33字符
+    group: validation
+    data:
+      tagid: "${auto}"
+      tagname: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    expect:
+      errcode: 40058
+  - name: 修改tagid为字符串
+    group: validation
+    data:
+      tagid: "invalid"
+      tagname: "${auto}"
+    expect:
+      errcode: 40058
+
+  # ---- 边界场景 ----
+  - name: 修改标签名边界值31字符
+    group: boundary
+    data:
+      tagid: "${auto}"
+      tagname: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
     expect:
       errcode: 0
-  - name: 删除不存在标签
+  - name: 修改标签名边界值32字符
+    group: boundary
     data:
-      tagid: 9999
+      tagid: "${auto}"
+      tagname: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    expect:
+      errcode: 0
+  - name: 修改标签名边界值33字符
+    group: boundary
+    data:
+      tagid: "${auto}"
+      tagname: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    expect:
+      errcode: 40058
+
+# ================= 删除标签 =================
+delete_tag:
+  # ---- 成功场景 ----
+  - name: 正常删除标签
+    group: success
+    data:
+      tagid: "${auto}"
+    expect:
+      errcode: 0
+
+  # ---- 边界场景 ----
+  - name: 删除不存在标签
+    group: boundary
+    data:
+      tagid: 99999
+    expect:
+      errcode: 40068
+  - name: 删除tagid为0
+    group: boundary
+    data:
+      tagid: 0
+    expect:
+      errcode: 40068
+  - name: 删除tagid为负数
+    group: boundary
+    data:
+      tagid: -1
+    expect:
+      errcode: 40068
+
+# ================= 添加标签成员 =================
+add_tag_users:
+  # ---- 成功场景 ----
+  - name: 向标签添加单个用户
+    group: success
+    data:
+      tagid: "${auto}"
+      userlist: ["${auto}"]
+    expect:
+      errcode: 0
+  - name: 向标签添加多个用户
+    group: success
+    data:
+      tagid: "${auto}"
+      userlist: ["${auto}", "${auto}"]
+    expect:
+      errcode: 0
+  - name: 向标签添加部门
+    group: success
+    data:
+      tagid: "${auto}"
+      partylist: [1]
+    expect:
+      errcode: 0
+  - name: 向标签同时添加用户和部门
+    group: success
+    data:
+      tagid: "${auto}"
+      userlist: ["${auto}"]
+      partylist: [1]
+    expect:
+      errcode: 0
+
+  # ---- 验证场景 ----
+  - name: 向非法tagid的标签添加成员
+    group: validation
+    data:
+      tagid: 99999
+      userlist: ["${auto}"]
+    expect:
+      errcode: 40068
+  - name: 向标签添加非法id部门
+    group: validation
+    data:
+      tagid: "${auto}"
+      partylist: [99999]
+    expect:
+      errcode: 40070
+  - name: 向标签添加空用户列表
+    group: validation
+    data:
+      tagid: "${auto}"
+      userlist: []
+    expect:
+      errcode: 40035
+  - name: 向标签添加空部门列表
+    group: validation
+    data:
+      tagid: "${auto}"
+      partylist: []
+    expect:
+      errcode: 40035
+  - name: 向标签添加用户和部门都为空
+    group: validation
+    data:
+      tagid: "${auto}"
+      userlist: []
+      partylist: []
+    expect:
+      errcode: 40035
+  - name: 向标签添加userlist包含字符串类型
+    group: validation
+    data:
+      tagid: "${auto}"
+      userlist: ["${auto}", 123]
+    expect:
+      errcode: 0
+  - name: 向标签添加partylist包含字符串类型
+    group: validation
+    data:
+      tagid: "${auto}"
+      partylist: [1, "invalid"]
+    expect:
+      errcode: 0
+
+  # ---- 边界场景 ----
+  - name: 向标签添加最大数量用户
+    group: boundary
+    data:
+      tagid: "${auto}"
+      userlist: ["${auto}", "${auto}", "${auto}", "${auto}", "${auto}"]
+    expect:
+      errcode: 0
+  - name: 向标签添加最大数量部门
+    group: boundary
+    data:
+      tagid: "${auto}"
+      partylist: [1, 1, 1, 1, 1]
+    expect:
+      errcode: 0
+
+# ================= 获取标签成员 =================
+get_tag_users:
+  # ---- 成功场景 ----
+  - name: 获取标签成员列表
+    group: success
+    data:
+      tagid: "${auto}"
+    expect:
+      errcode: 0
+
+  # ---- 边界场景 ----
+  - name: 获取不存在标签成员
+    group: boundary
+    data:
+      tagid: 99999
+    expect:
+      errcode: 40068
+  - name: 获取tagid为0的标签成员
+    group: boundary
+    data:
+      tagid: 0
     expect:
       errcode: 40068

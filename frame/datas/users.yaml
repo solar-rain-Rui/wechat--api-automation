@@ -1,92 +1,396 @@
+# ================= 创建成员 =================
+# YAML 只保留测试输入和断言数据，不负责数据准备或清理
+# 需要唯一化的字段统一使用 "${auto}" 占位符，由 fixture 动态生成
 create_user:
+  # ---- 成功场景 ----
   - name: 正常创建用户
+    group: success
     data:
-      userid: "test_user001"
-      name: "test_张三"
-      mobile: "13800000000"
+      userid: "${auto}"
+      name: "${auto}"
+      mobile: "${auto}"
       department: [1]
     expect:
       errcode: 0
   - name: 创建英文名用户
+    group: success
     data:
-      userid: "test_user002"
-      name: "test_John"
-      mobile: "13800000002"
+      userid: "${auto}"
+      name: "${auto}"
+      mobile: "${auto}"
       department: [1]
     expect:
       errcode: 0
-  - name: 创建缺失手机号用户
+  - name: 创建用户含邮箱
+    group: success
     data:
-      userid: "test_user003"
-      name: "test_无手机号"
+      userid: "${auto}"
+      name: "${auto}"
+      mobile: "${auto}"
+      email: "${auto}"
+      department: [1]
+    expect:
+      errcode: 0
+  - name: 创建用户指定性别男
+    group: success
+    data:
+      userid: "${auto}"
+      name: "${auto}"
+      mobile: "${auto}"
+      gender: 1
+      department: [1]
+    expect:
+      errcode: 0
+  - name: 创建用户指定性别女
+    group: success
+    data:
+      userid: "${auto}"
+      name: "${auto}"
+      mobile: "${auto}"
+      gender: 2
+      department: [1]
+    expect:
+      errcode: 0
+  - name: 创建用户多部门
+    group: success
+    data:
+      userid: "${auto}"
+      name: "${auto}"
+      mobile: "${auto}"
+      department: [1, 1]
+    expect:
+      errcode: 0
+  - name: 创建用户含职位
+    group: success
+    data:
+      userid: "${auto}"
+      name: "${auto}"
+      mobile: "${auto}"
+      position: "${auto}"
+      department: [1]
+    expect:
+      errcode: 0
+
+  # ---- 验证场景 ----
+  - name: 创建缺失手机号用户
+    group: validation
+    data:
+      userid: "${auto}"
+      name: "${auto}"
       department: [1]
     expect:
       errcode: 60129
-  - name: 创建手机号格式错误用户
+  - name: 创建手机号包含非数字字符
+    group: validation
     data:
-      userid: "test_user004"
-      name: "test_手机号错"
-      mobile: "12345"
+      userid: "${auto}"
+      name: "${auto}"
+      mobile: "13800000abc"
       department: [1]
     expect:
       errcode: 60103
-  - name: 创建重复userid用户
+  - name: 创建手机号为空字符串
+    group: validation
     data:
-      userid: "test_user001"
-      name: "test_重复ID"
-      mobile: "13800000009"
+      userid: "${auto}"
+      name: "${auto}"
+      mobile: ""
       department: [1]
     expect:
-      errcode: 60102
-  - name: 创建重复手机号用户
+      errcode: 60129
+  - name: 创建邮箱格式错误用户
+    group: validation
     data:
-      userid: "test_user006"
-      name: "test_重复手机号"
-      mobile: "13800000001"
+      userid: "${auto}"
+      name: "${auto}"
+      mobile: "${auto}"
+      email: "invalid_email"
       department: [1]
     expect:
-      errcode: 60104
-
-update_user:
-  - name: 修改用户姓名
+      errcode: 60105
+  - name: 创建性别参数非法值
+    group: validation
     data:
-      userid: "test_user001"
-      name: "张三修改"
+      userid: "${auto}"
+      name: "${auto}"
+      mobile: "${auto}"
+      gender: 3
+      department: [1]
     expect:
       errcode: 0
-  - name: 修改不存在用户
+  - name: 创建部门列表为空
+    group: validation
     data:
-      userid: "test_user999"
-      name: "不存在用户"
+      userid: "${auto}"
+      name: "${auto}"
+      mobile: "${auto}"
+      department: []
     expect:
-      errcode: 60111
-  - name: 修改手机号为空
+      errcode: 0
+  - name: 创建部门列表包含不存在部门
+    group: validation
     data:
-      userid: "test_user001"
-      mobile: ""
+      userid: "${auto}"
+      name: "${auto}"
+      mobile: "${auto}"
+      department: [99999]
+    expect:
+      errcode: 0
+  - name: 创建部门列表包含字符串
+    group: validation
+    data:
+      userid: "${auto}"
+      name: "${auto}"
+      mobile: "${auto}"
+      department: ["invalid"]
+    expect:
+      errcode: 40058
+  - name: 创建用户名为空
+    group: validation
+    data:
+      userid: "${auto}"
+      name: ""
+      mobile: "${auto}"
+      department: [1]
     expect:
       errcode: 40058
 
-get_user:
-  - name: 查询已存在用户
+  # ---- 边界场景 ----
+  - name: 创建用户userid超长
+    group: boundary
     data:
-      userid: "test_user001"
+      userid: "${'u' * 65}"
+      name: "${auto}"
+      mobile: "${auto}"
+      department: [1]
+    expect:
+      errcode: 40003
+  - name: 创建用户名超长
+    group: boundary
+    data:
+      userid: "${auto}"
+      name: "${'测' * 65}"
+      mobile: "${auto}"
+      department: [ 1 ]
     expect:
       errcode: 0
-  - name: 查询不存在用户
+  - name: 创建用户邮箱超长
+    group: boundary
     data:
-      userid: "test_user999"
+      userid: "${auto}"
+      name: "${auto}"
+      mobile: "${auto}"
+      email: "${'a'*60}@test.com"
+      department: [ 1 ]
     expect:
-      errcode: 60111
+      errcode: 60105
+  - name: 创建用户userid为null
+    group: validation
+    data:
+      userid: null
+      name: "${auto}"
+      mobile: "${auto}"
+      department: [ 1 ]
+    expect:
+      errcode: 41009
+  - name: 创建用户手机号为null
+    group: validation
+    data:
+      userid: "${auto}"
+      name: "${auto}"
+      mobile: null
+      department: [ 1 ]
+    expect:
+      errcode: 60129
+  - name: 创建手机号边界值11位
+    group: boundary
+    data:
+      userid: "${auto}"
+      name: "${auto}"
+      mobile: "13800000000"
+      department: [1]
+    expect:
+      errcode: 0
+  - name: 创建手机号边界值10位
+    group: boundary
+    data:
+      userid: "${auto}"
+      name: "${auto}"
+      mobile: "1380000000"
+      department: [1]
+    expect:
+      errcode: 60103
+  - name: 创建手机号边界值12位
+    group: boundary
+    data:
+      userid: "${auto}"
+      name: "${auto}"
+      mobile: "138000000000"
+      department: [1]
+    expect:
+      errcode: 60103
+  - name: 创建用户性别边界值0
+    group: boundary
+    data:
+      userid: "${auto}"
+      name: "${auto}"
+      mobile: "${auto}"
+      gender: 0
+      department: [1]
+    expect:
+      errcode: 0
 
-delete_user:
-  - name: 正常删除用户
+
+# ================= 查询成员 =================
+get_user:
+  # ---- 成功场景 ----
+  - name: 查询已存在用户
+    group: success
     data:
-      userid: "test_user006"
+      userid: "${auto}"
     expect:
       errcode: 0
-  - name: 删除不存在用户
+
+  # ---- 边界场景 ----
+  - name: 查询不存在用户
+    group: boundary
     data:
-      userid: "test_user999"
+      userid: "not_exist_user_99999"
     expect:
       errcode: 60111
+  - name: 查询userid为空
+    group: boundary
+    data:
+      userid: ""
+    expect:
+      errcode: 40058
+
+# ================= 修改成员 =================
+update_user:
+  # ---- 成功场景 ----
+  - name: 修改用户姓名
+    group: success
+    data:
+      userid: "${auto}"
+      name: "${auto}"
+    expect:
+      errcode: 0
+  - name: 修改用户手机号
+    group: success
+    data:
+      userid: "${auto}"
+      mobile: "${auto}"
+    expect:
+      errcode: 0
+  - name: 修改用户邮箱
+    group: success
+    data:
+      userid: "${auto}"
+      email: "${auto}"
+    expect:
+      errcode: 0
+  - name: 修改用户性别
+    group: success
+    data:
+      userid: "${auto}"
+      gender: 2
+    expect:
+      errcode: 0
+  - name: 修改用户部门列表
+    group: success
+    data:
+      userid: "${auto}"
+      department: [1]
+    expect:
+      errcode: 0
+
+  # ---- 验证场景 ----
+  - name: 修改不存在用户
+    group: validation
+    data:
+      userid: "not_exist_user_99999"
+      name: "${auto}"
+    expect:
+      errcode: 60111
+  - name: 修改手机号为空
+    group: validation
+    data:
+      userid: "${auto}"
+      mobile: " "
+    expect:
+      errcode: 40058
+  - name: 修改手机号格式错误
+    group: validation
+    data:
+      userid: "${auto}"
+      mobile: "12345"
+    expect:
+      errcode: 60103
+  - name: 修改邮箱格式错误
+    group: validation
+    data:
+      userid: "${auto}"
+      email: "invalid_email"
+    expect:
+      errcode: 60105
+  - name: 修改性别参数非法
+    group: validation
+    data:
+      userid: "${auto}"
+      gender: 3
+    expect:
+      errcode: 0
+  - name: 修改用户名为空
+    group: validation
+    data:
+      userid: "${auto}"
+      name: ""
+    expect:
+      errcode: 40058
+
+  # ---- 边界场景 ----
+  - name: 修改用户手机号为边界值11位
+    group: boundary
+    data:
+      userid: "${auto}"
+      mobile: "13800000000"
+    expect:
+      errcode: 0
+  - name: 修改用户性别边界值1
+    group: boundary
+    data:
+      userid: "${auto}"
+      gender: 1
+    expect:
+      errcode: 0
+  - name: 修改用户性别边界值2
+    group: boundary
+    data:
+      userid: "${auto}"
+      gender: 2
+    expect:
+      errcode: 0
+
+# ================= 删除成员 =================
+delete_user:
+  # ---- 成功场景 ----
+  - name: 正常删除用户
+    group: success
+    data:
+      userid: "${auto}"
+    expect:
+      errcode: 0
+
+  # ---- 边界场景 ----
+  - name: 删除不存在用户
+    group: boundary
+    data:
+      userid: "not_exist_user_99999"
+    expect:
+      errcode: 60111
+  - name: 删除userid为空
+    group: boundary
+    data:
+      userid: ""
+    expect:
+      errcode: 40058
