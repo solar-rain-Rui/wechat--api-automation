@@ -10,6 +10,7 @@ from frame.apis.base_api import BaseApi
 from frame.apis.contacts.departments import Departments
 from frame.apis.contacts.tags import Tags
 from frame.apis.contacts.users import Users
+from frame.apis.message.message import MessageApi
 from frame.common.config import cf
 from frame.common.db import DBUtil
 from frame.common.tools import load_yaml, CREATED_DEPT_IDS, CREATED_USER_IDS
@@ -75,6 +76,10 @@ def tag_api(token):
     """提供标签接口实例"""
     return Tags(token=token)
 
+@pytest.fixture(scope="session")
+def message_api(token):
+    """消息模块的 API 实例"""
+    return MessageApi(token=token)
 
 def replace_auto_placeholder(data, root_dept_id=1):
     """

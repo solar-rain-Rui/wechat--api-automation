@@ -10,34 +10,7 @@ from frame.common.logger import log
 
 # 每次测试用例都会自动创建一个临时部门；
 # 测试结束后，自动删除。
-@pytest.fixture(scope="function")
-def temp_department(department_api,request):
-    """按需创建临时部门：每个测试用例运行前创建，结束后自动删除"""
-    # 如果测试用例中有参数（通过 param 传入）
-    param = getattr(request, "param", None) or {}
-    dep_data = {
-        "name": param.get("name", f"按需测试部门_{int(time.time()) % 10000}"),  # 必须有合法 name
-        "parentid": param.get("parentid", 1)
-    }
 
-    # 创建部门
-    create_res = department_api.create(dep_data)
-    res_json = create_res.json()
-    errcode = res_json.get("errcode")
-
-    if errcode != 0:
-        raise Exception(f"❌ 创建部门失败：{res_json}")
-
-    dep_id = res_json.get("id")
-    log.info(f"按需创建测试部门成功，id={dep_id}，响应={res_json}")
-    # 返回部门 id 给测试用例使用
-    yield dep_id
-
-    # 测试结束自动清理
-    if dep_id:
-        department_api.delete({"id": dep_id})
-        log.info(f"按需删除测试部门 id={dep_id}")
-        print("清除临时部门")
 
 
 
