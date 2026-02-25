@@ -1,40 +1,44 @@
+import time
+import uuid
+
 import pytest
 import allure
 from frame.common.logger import log
 
 @allure.epic("企业微信接口自动化")
 @allure.feature("部门管理")
-@allure.story("部门业务流：创建 → 修改 → 查询 → 删除")
+@allure.story("部门业务流：创建 → 查询 → 修改 → 再查询 → 删除  ")
 @allure.severity(allure.severity_level.CRITICAL)
 class TestDepartmentsFlow:
     """
     部门模块 - 业务流测试
-    目的：验证部门的增、改、查、删接口能否顺利联动运行，形成完整业务闭环。
+    目的：验证部门的核心接口能否顺利联动运行，形成完整业务闭环。
     """
 
     @pytest.mark.flow
     def test_department_business_flow(self, department_api):
-        """
-        测试流程：
-        1️⃣ 创建部门
-        2️⃣ 修改部门
-        3️⃣ 获取部门详情
-        4️⃣ 删除部门
-        """
 
         log.info("========== 【部门业务流测试开始】 ==========")
 
-        # 1️⃣ 创建部门
+        # 1.创建部门
         log.info("Step 1: 创建部门")
-        create_name = "业务流测试部门"
+        unique = uuid.uuid4().hex[:6]
+        create_name = f"业务流测试部门_{unique}"
         create_res = department_api.create({ "name": create_name,
                                          "parentid": 1})  # parentid=1
         log.info(f"创建部门响应: {create_res.json()}")
         assert create_res.json()["errcode"] == 0
         dep_id = create_res.json()["id"]
 
-        # 2️⃣ 修改部门
-        log.info("Step 2: 修改部门名称")
+        # 2.获取部门详情
+        log.info("Step 2: 查询部门")
+        get_res = department_api.get(dep_id)
+        log.info(f"查询部门响应: {get_res.json()}")
+        # 先检查接口是否成功
+        assert get_res.json()["errcode"] == 0, f"查询部门失败: {get_res.json()}"
+
+        # 3. 修改部门
+        log.info("Step 3: 修改部门名称")
         updata_name="修改后的业务流部门"
         update_data = {
             "id": dep_id,
@@ -44,8 +48,8 @@ class TestDepartmentsFlow:
         log.info(f"修改部门响应: {update_res.json()}")
         assert update_res.json()["errcode"] == 0
 
-        # 3️⃣ 获取部门详情
-        log.info("Step 3: 获取部门详情")
+        # 4.修改后再获取部门详情
+        log.info("Step 4: 修改后再获取部门详情")
         get_res = department_api.get(dep_id)
         log.info(f"查询部门响应: {get_res.json()}")
         # 先检查接口是否成功
@@ -59,10 +63,11 @@ class TestDepartmentsFlow:
         assert found, f"部门ID {dep_id} 未找到"
 
 
-        # 4️⃣ 删除部门
-        log.info("Step 4: 删除部门")
+        # 5. 删除部门
+        log.info("Step 5: 删除部门")
         delete_res = department_api.delete(dep_id)
         log.info(f"删除部门响应: {delete_res.json()}")
         assert delete_res.json()["errcode"] == 0
+
 
         log.info("========== 【部门业务流测试结束】 ==========")
