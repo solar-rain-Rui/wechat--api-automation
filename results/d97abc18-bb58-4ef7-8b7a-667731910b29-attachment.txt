@@ -1,2 +1,0 @@
-[32mINFO    [0m AutoTestLogger:base_api.py:16 请求接口为：https://qyapi.weixin.qq.com/cgi-bin/department/simplelist?access_token=eGbIDa10kRMQI5WuzPzjKgqb8D8uVpxO_3aJD51txS8-NfCY0eJ8LsnQ7fA_SscXu8znQALfUZbHWETeOgpr9BNcuMIZ-HDpw821IeihXdVGoUqXsrFKXnRRFKCudONKYOYRl4OzjgrYKI_AZz35eboeI9J94bHIRRG1ekpVlE0zXyRa_Fx4iw0Yp0RLlxXypNIi-70clUO1yuwzk2cQZQ
-[32mINFO    [0m AutoTestLogger:base_api.py:18 接口响应为：{"errcode":0,"errmsg":"ok","department_id":[{"id":1,"parentid":0,"order":100000000}]}
