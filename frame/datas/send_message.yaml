@@ -1,0 +1,64 @@
+# ================= 发送消息 =================
+send_message:
+  # ---- 成功场景 ----
+  - name: 给指定用户发送文本消息
+    group: success
+    data:
+      agentid: 1000002
+      content: "自动化测试-发给用户"
+      touser: "auto_user"        # 替换为你企业微信真实用户
+      toparty: ""
+      totag: ""
+      safe: 0
+    expect:
+      errcode: 0
+
+  - name: 给指定部门发送文本消息
+    group: success
+    data:
+      agentid: 1000002
+      content: "自动化测试-发给部门"
+      touser: ""
+      toparty: "2"            #  替换为真实部门id
+      totag: ""
+      safe: 0
+    expect:
+      errcode: 0
+
+  # ---- 验证场景 ----
+  - name: 接收用户不存在
+    group: validation
+    data:
+      agentid: 1000002
+      content: "自动化测试-非法用户"
+      touser: "not_exist_user_999"
+      toparty: ""
+      totag: ""
+      safe: 0
+    expect:
+      errcode: 60111
+
+  - name: 接收方全部为空
+    group: validation
+    data:
+      agentid: 1000002
+      content: "自动化测试-接收方为空"
+      touser: ""
+      toparty: ""
+      totag: ""
+      safe: 0
+    expect:
+      errcode: 41003
+
+  # ---- 边界场景 ----
+  - name: 消息内容为空字符串
+    group: boundary
+    data:
+      agentid: 1000002
+      content: ""
+      touser: "auto_user"        # ⚠️ 同样替换
+      toparty: ""
+      totag: ""
+      safe: 0
+    expect:
+      errcode: 41003
