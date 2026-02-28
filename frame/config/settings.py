@@ -1,0 +1,1 @@
+MOCK_MESSAGE = True  #  只控制消息模块

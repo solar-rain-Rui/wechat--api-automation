@@ -5,17 +5,17 @@ from datetime import datetime
 
 class Logger:
     def __init__(self):
-        # 1️⃣ 获取项目根目录
+        # 1️. 获取项目根目录
         base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-        # 2️⃣ 定义日志目录路径
+        # 2️. 定义日志目录路径
         log_dir = os.path.join(base_path, "logs")
         os.makedirs(log_dir, exist_ok=True)
 
-        # 3️⃣ 自动生成当天日志文件名
+        # 3️.自动生成当天日志文件名
         log_file = os.path.join(log_dir, f"{datetime.now().strftime('%Y-%m-%d')}.log")
 
-        # 4️⃣ 创建 logger 对象(日志记录器)
+        # 4️. 创建 logger 对象(日志记录器)
         self.logger = logging.getLogger("AutoTestLogger")
         self.logger.setLevel(logging.INFO)
 

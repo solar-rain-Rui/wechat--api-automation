@@ -4,7 +4,7 @@ import os
 import copy
 
 from frame.common.logger import log
-from frame.common.tools import load_yaml
+from frame.common.utils.tools import load_yaml
 from frame.common.assertions import AssertUtil
 from frame.common.schema import SchemaValidator
 from frame.testcase.conftest import replace_auto_placeholder

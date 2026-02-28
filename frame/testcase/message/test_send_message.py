@@ -2,7 +2,7 @@ import pytest
 import allure
 
 from frame.common.logger import log
-from frame.common.tools import load_yaml
+from frame.common.utils.tools import load_yaml
 from frame.common.assertions import AssertUtil
 
 

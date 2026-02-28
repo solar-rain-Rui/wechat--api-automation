@@ -6,7 +6,7 @@ import allure
 
 from frame.common.assertions import AssertUtil
 from frame.common.schema import SchemaValidator
-from frame.common.tools import load_yaml
+from frame.common.utils.tools import load_yaml
 from frame.testcase.conftest import replace_auto_placeholder_tag
 
 

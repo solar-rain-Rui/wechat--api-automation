@@ -1,4 +1,4 @@
-# frame/testcases/conftest.py
+
 import random
 from types import SimpleNamespace
 
@@ -6,14 +6,12 @@ import pytest
 import copy
 import uuid
 
-from frame.apis.base_api import BaseApi
 from frame.apis.contacts.departments import Departments
 from frame.apis.contacts.tags import Tags
 from frame.apis.contacts.users import Users
 from frame.apis.message.message import MessageApi
-from frame.common.config import cf
-from frame.common.db import DBUtil
-from frame.common.tools import load_yaml, CREATED_DEPT_IDS, CREATED_USER_IDS
+from frame.common.token_get import fetch_token
+from frame.common.utils.tools import load_yaml
 from frame.common.logger import log
 
 
@@ -36,29 +34,10 @@ def cfg():
 def token():
     """获取全局 token，只执行一次"""
     print("🔥 token fixture 被执行了")
-    base_url = cf.get("base_url")
-    corpid = cf.get("corpid")["接口自动化测试"]
-    corpsecret = cf.get("corpsecret")["contacts"]
-    url = f"{base_url}/gettoken?corpid={corpid}&corpsecret={corpsecret}"
-    api = BaseApi() #创建(统一请求接口)对象
-    req = {
-        "method": "GET",
-        "url": url
-    }
-    r = api.send_api(req)
-    return r.json()["access_token"]
 
-# @pytest.fixture(scope="session")
-# def db():
-#     """提供数据库连接实例"""
-#     db = DBUtil(
-#         host="localhost",
-#         user="root",
-#         password="root1997",
-#         database="wecom_test"
-#     )
-#     yield db
-#     db.close()
+    return fetch_token()
+
+
 #统一管理业务接口对象的fixture
 @pytest.fixture(scope="session")
 def department_api(token): #获取的token传进来
@@ -247,7 +226,9 @@ def department_factory(department_api):
     
     yield factory
 
-    # ===== 测试结束自动清理 =====
+    # ===== 测试结束自动清理(批量清理) =====
+    if created_ids:
+        log.info("[factory] 开始批量清理部门")
     for dep_id in created_ids:
         try:
             department_api.delete(dep_id)
@@ -277,10 +258,12 @@ def user_factory(user_api):
 
     yield _create
 
+    if created_ids:
+        log.info("[factory] 开始批量清理用户")
     for userid in created_ids:
         try:
             user_api.delete(userid)
-            log.info(f"🧹 自动清理测试用户：{userid}")
+            log.info(f" 自动清理测试用户：{userid}")
         except Exception as e:
             log.warning(f"清理用户 {userid} 失败: {e}")
 
@@ -312,10 +295,12 @@ def tag_factory(tag_api):
 
     yield _create
 
+    if created_ids:
+        log.info("[factory] 开始批量清理标签")
     for tagid in created_ids:
         try:
             tag_api.delete(tagid)
-            log.info(f"🧹 自动清理测试标签：{tagid}")
+            log.info(f" 自动清理测试标签：{tagid}")
         except Exception as e:
             log.warning(f"清理标签 {tagid} 失败: {e}")
 
