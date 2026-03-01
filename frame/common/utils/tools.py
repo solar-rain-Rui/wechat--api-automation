@@ -8,7 +8,7 @@ CREATED_USER_IDS = []
 
 def get_frame_root():
     # 返回 frame 目录的绝对路径
-    return os.path.dirname(os.path.dirname(__file__))
+    return os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 
 def load_yaml(relpath):
     """

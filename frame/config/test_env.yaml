@@ -3,6 +3,10 @@
 base_url: https://qyapi.weixin.qq.com/cgi-bin
 #提取相关账户信息
 corpid:
-  接口自动化测试: ww779187ee7c9f7085
+  接口自动化测试: ww36cf0d273af7a133
 corpsecret:
-  contacts: AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE
+  contacts: Ey1eTYQUDc01G34tkt8CZrjK6_tTQBh2j-dqRTn-t0U
+  #contacts: cKCjTj5F-5JUOA6Hr1fC1RTtb8WKm37nNr2uouGYDgE
+
+
+
