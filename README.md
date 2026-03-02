@@ -22,10 +22,10 @@
 
 ### 报告截图
 
-！[allure Report](./images/allure_overview.jpeg)
-！[allure Report](./images/allure_testcases.jpeg)
-！[allure Report](./images/allure_failtest.jpeg)
-！[allure Report](./images/allure_testcase_workflow.jpeg)
+![allure Report1总览](./images/allure_overview.jpeg)
+![allure Report2功能](./images/allure_testcases.jpeg)
+![allure Report失败](./images/allure_failtest.jpeg)
+![allure Report业务链路](./images/allure_testcase_workflow.jpeg)
 
 
 ## 项目能力
