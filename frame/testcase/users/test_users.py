@@ -16,6 +16,7 @@ from frame.testcase.conftest import replace_auto_placeholder_user
 class TestUsers:
     @allure.story("创建成员")
     @pytest.mark.parametrize("case", load_yaml("datas/users.yaml")["create_user"])
+    @pytest.mark.smoke
     def test_create_user(self, user_factory, case):
         allure.dynamic.title(case["name"])
         case = copy.deepcopy(case)

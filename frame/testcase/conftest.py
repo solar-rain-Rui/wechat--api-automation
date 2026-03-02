@@ -25,15 +25,11 @@ from frame.common.logger import log
 #     log.info("环境数据准备完成。")
 
 
-@pytest.fixture(scope="session")
-def cfg():
-    """全局配置对象"""
-    return load_yaml("config/test_env.yaml")
 
 @pytest.fixture(scope="session")
 def token():
     """获取全局 token，只执行一次"""
-    print("🔥 token fixture 被执行了")
+    print(" token fixture 被执行了")
 
     return fetch_token()
 
@@ -42,7 +38,7 @@ def token():
 @pytest.fixture(scope="session")
 def department_api(token): #获取的token传进来
     """部门模块的 API 实例"""
-    print("🔥 department_api fixture 被执行")
+    print(" department_api fixture 被执行")
     return Departments(token=token)
 
 @pytest.fixture(scope="session")
