@@ -16,6 +16,7 @@ class TestDepartmentsFlow:
     """
 
     @pytest.mark.flow
+    @pytest.mark.smoke
     def test_department_business_flow(self, department_api):
 
         log.info("========== 【部门业务流测试开始】 ==========")
