@@ -24,7 +24,6 @@
 
 ![allure Report1总览](./images/allure_overview.jpeg)
 ![allure Report2功能](./images/allure_testcases.jpeg)
-![allure Report失败](./images/allure_failtest.jpeg)
 ![allure Report业务链路](./images/allure_testcase_workflow.jpeg)
 
 
