@@ -8,7 +8,6 @@ from frame.common.logger import log
 @allure.story("标签业务流：创建 → 打标签 → 查询 → 删除")
 @allure.severity(allure.severity_level.CRITICAL)
 @pytest.mark.flow
-@pytest.mark.smoke
 class TestTagFlow:
     """
     标签管理模块 - 业务流测试
