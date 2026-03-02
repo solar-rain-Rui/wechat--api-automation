@@ -9,7 +9,6 @@ from frame.common.logger import log
 @allure.story("部门-用户-消息业务流")
 @allure.title("创建部门 → 创建用户 → 发送消息")
 @allure.severity(allure.severity_level.CRITICAL)
-@pytest.mark.smoke
 @pytest.mark.workflow
 class TestDepartmentUserMessageWorkflow:
     """

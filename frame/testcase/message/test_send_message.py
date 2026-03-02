@@ -12,6 +12,7 @@ class TestSendMessage:
 
     @allure.story("发送消息")
     @pytest.mark.parametrize("case", load_yaml("datas/send_message.yaml")["send_message"])
+    @pytest.mark.smoke
     def test_send_message(self, message_api, case):
         """测试发送消息接口"""
         allure.dynamic.title(case["name"])

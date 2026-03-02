@@ -15,7 +15,6 @@ from frame.testcase.conftest import replace_auto_placeholder_tag
 class TestTags:
     @allure.story("创建标签")
     @pytest.mark.parametrize("case", load_yaml("datas/tags.yaml")["create_tag"])
-    @pytest.mark.smoke
     def test_create_tag(self, tag_factory, case):
         allure.dynamic.title(case["name"])
         case = copy.deepcopy(case)
