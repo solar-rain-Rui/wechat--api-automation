@@ -21,10 +21,8 @@ class TestDepartments:
         allure.dynamic.title(case["name"])
 
         # 使用统一预处理函数处理 ${auto} 占位符
-        processed_data = replace_auto_placeholder(case["data"])
-
         # 通过 factory 创建部门，自动托管清理
-        res = department_factory.create(processed_data)
+        res = department_factory.create(case["data"])
         res_json = res.json()
 
         assert res.status_code == 200
@@ -40,7 +38,7 @@ class TestDepartments:
         if res_json.get("errcode") == 0:
             dep_id = res_json.get("id")
             if dep_id:
-                log.info(f"✅ 创建测试部门ID：{dep_id}")
+                log.info(f" 创建测试部门ID：{dep_id}")
 
     @allure.story("查询部门")
     @pytest.mark.parametrize("case", load_yaml("datas/departments.yaml")["get_department"])
