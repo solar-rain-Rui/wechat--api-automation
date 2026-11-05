@@ -27,7 +27,7 @@ class TestTagFlow:
 
         # ========== Step 2 创建用户 ==========
         log.info("Step 2: 创建用户")
-        create_user_res = user_factory({
+        create_user_res = user_factory.create({
             "userid": "${auto}",
             "name": "${auto}",
             "mobile": "${auto}",

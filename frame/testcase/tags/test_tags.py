@@ -18,7 +18,7 @@ class TestTags:
     def test_create_tag(self, tag_factory, case):
         allure.dynamic.title(case["name"])
         case = copy.deepcopy(case)
-        res = tag_factory(case["data"])
+        res = tag_factory.create(case["data"])
         assert res.status_code == 200
         res_json = res.json()
         if "errcode_not" in case.get("expect", {}):
@@ -35,7 +35,7 @@ class TestTags:
         allure.dynamic.title(case["name"])
         tagid = case["data"]["tagid"]
         if tagid == "${auto}":
-            create_res = tag_factory({"tagname": "${auto}"})
+            create_res = tag_factory.create({"tagname": "${auto}"})
             tagid = getattr(create_res, "created_tagid", None)
             assert tagid is not None, "factory 未返回 created_tagid"
         res = tag_api.get(tagid)
@@ -51,7 +51,7 @@ class TestTags:
         allure.dynamic.title(case["name"])
         data = replace_auto_placeholder_tag(case["data"])
         if case["data"].get("tagid") == "${auto}":
-            create_res = tag_factory({"tagname": "${auto}"})
+            create_res = tag_factory.create({"tagname": "${auto}"})
             tagid = getattr(create_res, "created_tagid", None)
             assert tagid is not None, "factory 未返回 created_tagid"
             data["tagid"] = tagid
@@ -68,7 +68,7 @@ class TestTags:
         allure.dynamic.title(case["name"])
         tagid = case["data"]["tagid"]
         if tagid == "${auto}":
-            create_res = tag_factory({"tagname": "${auto}"})
+            create_res = tag_factory.create({"tagname": "${auto}"})
             tagid = getattr(create_res, "created_tagid", None)
             assert tagid is not None, "factory 未返回 created_tagid"
         res = tag_api.delete(tagid)
@@ -87,7 +87,7 @@ class TestTags:
         #  用 factory 处理 tag（由 factory 内部调用 replace_auto_placeholder_tag）
         tagid = data.get("tagid")
         if tagid == "${auto}":
-            create_res = tag_factory({"tagname": "${auto}"})
+            create_res = tag_factory.create({"tagname": "${auto}"})
             tagid = getattr(create_res, "created_tagid")
             assert tagid, "factory 未返回 created_tagid"
 
@@ -99,7 +99,7 @@ class TestTags:
             processed_userlist = []
             for item in userlist:
                 if item == "${auto}":
-                    create_user_res = user_factory({
+                    create_user_res = user_factory.create({
                         "userid": "${auto}",
                         "name": "${auto}",
                         "mobile": "${auto}",
@@ -142,7 +142,7 @@ class TestTags:
         allure.dynamic.title(case["name"])
         tagid = case["data"]["tagid"]
         if tagid == "${auto}":
-            create_res = tag_factory({"tagname": "${auto}"})
+            create_res = tag_factory.create({"tagname": "${auto}"})
             tagid = getattr(create_res, "created_tagid", None)
             assert tagid is not None, "factory 未返回 created_tagid"
         res = tag_api.get_users(tagid)

@@ -125,7 +125,7 @@ class TestAbnormalWorkflow:
             "mobile": "${auto}",
             "department": [dept_id]
         }
-        create_user_res = user_factory(user_data)
+        create_user_res = user_factory.create(user_data)
         create_user_json = create_user_res.json()
         
         assert create_user_res.status_code == 200
@@ -217,7 +217,7 @@ class TestAbnormalWorkflow:
                 "mobile": "${auto}",
                 "department": [dept_id]
             }
-            create_user_res = user_factory(user_data)
+            create_user_res = user_factory.create(user_data)
             create_user_json = create_user_res.json()
             
             assert create_user_res.status_code == 200
