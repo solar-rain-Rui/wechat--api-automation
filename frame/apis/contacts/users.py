@@ -1,18 +1,18 @@
 # frame/api/users.py
-from frame.apis.base_api import BaseApi
+from frame.apis.weixin_base import WeComApi
 
 
-class Users(BaseApi):
+class Users(WeComApi):
     """成员管理模块"""
 
     def create(self, data):
         """创建成员"""
         req = {
             "method": "post",
-            "url": f"{self.base_url}/user/create?access_token={self.token}",
+            "url": f"{self.base_url}/user/create",
+            "params": {"access_token": self.token},
             "json": data
         }
-        print(">>> 创建用户请求体:", data)  # 👈 看看 department 是不是 []
         return self.send_api(req)
 
     def get(self, userid):
@@ -56,7 +56,7 @@ class Users(BaseApi):
         """
         return self.send_api({
             "method": "GET",
-            "url": "https://qyapi.weixin.qq.com/cgi-bin/user/list",
+            "url": f"{self.base_url}/user/list",
             "params": {
                 "access_token": self.token,
                 "department_id": department_id,

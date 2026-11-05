@@ -8,12 +8,12 @@
 - 与现有 user/tag/department 风格对齐
 """
 
-from frame.apis.base_api import BaseApi
+from frame.apis.weixin_base import WeComApi
 from frame.common.logger import log
 from frame.config.settings import MOCK_MESSAGE
 
 
-class MessageApi(BaseApi):
+class MessageApi(WeComApi):
     """企业微信消息发送接口"""
 
     SEND_MESSAGE_PATH = "/message/send"
@@ -57,11 +57,10 @@ class MessageApi(BaseApi):
             return MockResponse(errcode)
 
         # ================= real 分支 =================
-        url = f"{self.base_url}{self.SEND_MESSAGE_PATH}?access_token={self.token}"
-
         req = {
             "method": "POST",
-            "url": url,
+            "url": f"{self.base_url}{self.SEND_MESSAGE_PATH}",
+            "params": {"access_token": self.token},
             "json": data,
         }
 
