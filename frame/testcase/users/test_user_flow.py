@@ -26,7 +26,7 @@ class TestUserFlow:
 
         # 1️. 创建用户
         log.info("Step 1: 创建用户")
-        create_res = user_factory({
+        create_res = user_factory.create({
             "userid": "${auto}",
             "name": "${auto}",
             "mobile": "${auto}",

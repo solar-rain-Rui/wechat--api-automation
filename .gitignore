@@ -2,3 +2,15 @@
 __pycache__/
 *.pyc
 
+# 本地敏感配置（真实密钥只放本地，不提交）
+.env
+
+# 日志文件
+logs/
+frame/logs/
+*.log
+
+# 测试报告与缓存产物
+allure-results/
+allure-report/
+.pytest_cache/

@@ -1,11 +1,9 @@
-from frame.apis.base_api import BaseApi
-
-print(">>> LOADING Tags CLASS FROM:", __file__)
+from frame.apis.weixin_base import WeComApi
 
 import allure
 from frame.common.logger import log
 
-class Tags(BaseApi):
+class Tags(WeComApi):
     @allure.step("创建标签")
     def create(self, tagname, tagid=None):
         data = {"tagname": tagname}
@@ -13,7 +11,7 @@ class Tags(BaseApi):
             data["tagid"] = tagid
         req = {
             "method": "POST",
-            "url": "https://qyapi.weixin.qq.com/cgi-bin/tag/create",
+            "url": f"{self.base_url}/tag/create",
             "params": {"access_token": self.token},
             "json": data
         }
@@ -25,7 +23,7 @@ class Tags(BaseApi):
         data = {"tagid": tagid, "tagname": tagname}
         req = {
             "method": "POST",
-            "url": "https://qyapi.weixin.qq.com/cgi-bin/tag/update",
+            "url": f"{self.base_url}/tag/update",
             "params": {"access_token": self.token},
             "json": data
         }
@@ -35,7 +33,7 @@ class Tags(BaseApi):
     def get(self, tagid):
         req = {
             "method": "GET",
-            "url": "https://qyapi.weixin.qq.com/cgi-bin/tag/get",
+            "url": f"{self.base_url}/tag/get",
             "params": {"access_token": self.token, "tagid": tagid}
         }
         return self.send_api(req)
@@ -44,7 +42,7 @@ class Tags(BaseApi):
     def delete(self, tagid):
         req = {
             "method": "GET",
-            "url": "https://qyapi.weixin.qq.com/cgi-bin/tag/delete",
+            "url": f"{self.base_url}/tag/delete",
             "params": {"access_token": self.token, "tagid": tagid}
         }
         return self.send_api(req)
@@ -67,7 +65,7 @@ class Tags(BaseApi):
 
         req = {
             "method": "POST",
-            "url": "https://qyapi.weixin.qq.com/cgi-bin/tag/addtagusers",
+            "url": f"{self.base_url}/tag/addtagusers",
             "params": {"access_token": self.token},
             "json": data
         }
@@ -81,7 +79,7 @@ class Tags(BaseApi):
         """
         req = {
             "method": "GET",
-            "url": "https://qyapi.weixin.qq.com/cgi-bin/tag/get",
+            "url": f"{self.base_url}/tag/get",
             "params": {"access_token": self.token, "tagid": tagid}
         }
         return self.send_api(req)
@@ -89,7 +87,7 @@ class Tags(BaseApi):
     def list(self):
         req = {
             "method": "GET",
-            "url": "https://qyapi.weixin.qq.com/cgi-bin/tag/list",
+            "url": f"{self.base_url}/tag/list",
             "params": {
                 "access_token": self.token
             }

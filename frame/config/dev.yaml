@@ -1,6 +1,6 @@
 #开发环境
 base_url: https://qyapi.weixin.qq.com/cgi-bin
 corpid:
-  接口自动化测试: ww779187ee7c9f7085_dev
+  接口自动化测试: REPLACE_WITH_YOUR_CORPID
 corpsecret:
-  contacts: AAR4FC_5E6m4mbvKWepNrLt7qPFdIHXrjrK77sQcNqE_dev
+  contacts: REPLACE_WITH_YOUR_CORPSECRET

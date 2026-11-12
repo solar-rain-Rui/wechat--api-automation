@@ -19,7 +19,7 @@ class TestUsers:
     def test_create_user(self, user_factory, case):
         allure.dynamic.title(case["name"])
         case = copy.deepcopy(case)
-        res = user_factory(case["data"])
+        res = user_factory.create(case["data"])
         assert res.status_code == 200
         res_json = res.json()
         if "errcode_not" in case.get("expect", {}):
@@ -36,7 +36,7 @@ class TestUsers:
         allure.dynamic.title(case["name"])
         userid = case["data"]["userid"]
         if userid == "${auto}":
-            create_res = user_factory({
+            create_res = user_factory.create({
                 "userid": "${auto}",
                 "name": "${auto}",
                 "mobile": "${auto}",
@@ -57,7 +57,7 @@ class TestUsers:
         allure.dynamic.title(case["name"])
         data = replace_auto_placeholder_user(case["data"])
         if case["data"].get("userid") == "${auto}":
-            create_res = user_factory({
+            create_res = user_factory.create({
                 "userid": "${auto}",
                 "name": "${auto}",
                 "mobile": "${auto}",
@@ -79,7 +79,7 @@ class TestUsers:
         allure.dynamic.title(case["name"])
         userid = case["data"]["userid"]
         if userid == "${auto}":
-            create_res = user_factory({
+            create_res = user_factory.create({
                 "userid": "${auto}",
                 "name": "${auto}",
                 "mobile": "${auto}",
